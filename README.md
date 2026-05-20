@@ -39,7 +39,7 @@ Edite em `index.html`:
 | Item | Onde alterar |
 |------|----------------|
 | Telefone | Links `tel:` e WhatsApp |
-| E-mail | `contato@geoplan.com.br` |
+| E-mail | `geoplanengenharia.to@gmail.com` |
 | Estatísticas (+500, etc.) | Seção hero |
 | Região de atendimento | Seção contato |
 

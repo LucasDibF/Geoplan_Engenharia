@@ -352,7 +352,7 @@ function initContactForm() {
 
     const assunto = encodeURIComponent(`Orçamento SPT — ${data.nome}`);
     const corpoEncoded = encodeURIComponent(corpo);
-    window.location.href = `mailto:contato@geoplan.com.br?subject=${assunto}&body=${corpoEncoded}`;
+    window.location.href = `mailto:geoplanengenharia.to@gmail.com?subject=${assunto}&body=${corpoEncoded}`;
 
     showFeedback(
       feedback,
