@@ -4,3 +4,14 @@ Thumbs.db
 .env
 .env.*
 .vercel
+node_modules/
+dist/
+.dev/
+coverage/
+playwright-report/
+test-results/
+.impeccable/cache/
+.impeccable/concept-cache.json
+.impeccable/build/
+/js/frontend.js
+/js/frontend.css

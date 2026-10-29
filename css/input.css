@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 400; font-display: swap; src: url('../assets/fonts/cormorant-garamond-400-normal.ttf') format('truetype'); }
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url('../assets/fonts/dm-sans-400-normal.ttf') format('truetype'); }
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 500; font-display: swap; src: url('../assets/fonts/dm-sans-500-normal.ttf') format('truetype'); }
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 600; font-display: swap; src: url('../assets/fonts/dm-sans-600-normal.ttf') format('truetype'); }
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 700; font-display: swap; src: url('../assets/fonts/dm-sans-700-normal.ttf') format('truetype'); }
+:root {
+  --geo-50: #f4f2ee; --geo-100: #eeebe5; --geo-200: #e9e5de; --geo-300: #d8d4cc;
+  --geo-500: #d87331; --geo-600: #bf5e22; --geo-700: #6c6a64; --geo-800: #33312d; --geo-900: #292824; --geo-950: #242422;
+  --geo-contact-border: #676158; --geo-field-dark: #91897c; --geo-placeholder-dark: #c1b9ac;
+  --font-editorial: 'DM Sans', Arial, sans-serif; --font-gallery: 'Cormorant Garamond', Georgia, serif;
+}
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+[hidden] { display: none !important; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

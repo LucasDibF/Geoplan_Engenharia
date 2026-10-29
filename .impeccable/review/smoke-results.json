@@ -1,0 +1,27 @@
+{
+  "url": "http://127.0.0.1:8765/",
+  "scope": "preview-only; no production build or full suites",
+  "checks": [
+    "one-h1; 10 services; 8 process steps; local CSS and fonts HTTP 200",
+    "no horizontal document overflow at 320/390/768/1024/1280/1440/1600px",
+    "axe WCAG A/AA + 2.1 at 1440px and 390px: zero violations",
+    "corrected hover contrast >=4.5:1; computed section/row/FAQ spacing recorded",
+    "keyboard skip, anchor focus, mobile menu Escape/close, single FAQ open",
+    "reduced motion; required/email validation; prepared mailto/file reference; no external app; values retained"
+  ],
+  "pageErrors": [],
+  "failedRequests": [],
+  "hoverContrast": {
+    "foreground": "rgb(43, 40, 38)",
+    "background": "rgb(224, 214, 200)",
+    "ratio": 10.195144467152716
+  },
+  "spacing": {
+    "numbersPadding": "32px",
+    "sectionPadding": "72px",
+    "standardRowPadding": "22.4px",
+    "faqSummaryPadding": "24px",
+    "contentInset": 20
+  },
+  "passed": true
+}

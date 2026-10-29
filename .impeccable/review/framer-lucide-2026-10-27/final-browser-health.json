@@ -1,0 +1,17 @@
+{
+  "bundleSha256": "8c729db633abe1376c4fd58f3d45e9364ca3fe1d6ca5b7ff537463096bdefa4a",
+  "bundleBytes": 392285,
+  "gzipBytes": 126158,
+  "views": [
+    {
+      "width": 1440,
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "errors": [],
+      "overflow": false
+    }
+  ]
+}

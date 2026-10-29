@@ -1,0 +1,21 @@
+# Adjudicação do detector — resultado histórico preservado
+
+**O detector original retornou exit 2 e continua exit 2. Não está “clean”.** Não houve segunda execução, ignore-rule, supressão ou modificação de `detector.json`. Esta adjudicação não substitui um relatório novo nem constitui aprovação de publicação.
+
+Base: `.impeccable/review/detector.json` (execução única), CSS atual, `smoke-results.json` posterior à correção e as sete capturas que o finish reviewer fresco conferiu. A devolutiva do Líder informa disposition **FIX**, sem falha visual material nessas capturas; correções pendentes eram de testes/evidência/documentação. Não ampliar esse parecer para uma aprovação final de produto ou tooling.
+
+| Família / linhas no relatório original | Decisão e limite | Evidência |
+| --- | --- | --- |
+| `low-contrast`, `:2–56` | Achado real: cobre escuro sobre areia dava 4.3:1 no hover. Corrigido antes desta passagem para carvão profundo em links, índice e FAQ. A medição posterior de um hover representativo foi **10.195144467152716:1**; não é uma segunda execução do detector. | `smoke-results.json` → `hoverContrast`, `css/site.css:51,54,112`; primeira dobra desktop/mobile e revisão fresca. O resultado original não foi reescrito. |
+| `cramped-padding`, `:57–226` | Aceito como divergência da heurística com o agrupamento renderizado. Seções têm padding-block e containers com margem; normas/FAQ têm inset no filho. Pranchas de imagem junto ao limite são full-bleed intencionais da referência pinned, não texto comprimido. Não se adicionou padding fictício para silenciar o aviso. | `smoke-results.json` → `spacing`: mobile números 32px, seções 72px, norma 22.4px, summary 24px, inset lateral 20px; `css/site.css:12–13,59,92,95–100,110,197,214`; `desktop.png`, `mobile.png`; revisão fresca sem falha visual material. |
+| `design-system-color`, `:227–238,525–536,573–596` | Uso legítimo, documentação reconciliada. Superfície carvão secundária já pertence à paleta herdada; vermelho escuro é semântica funcional de erro, não cor comercial nova. | Frontmatter `DESIGN.md` → `charcoal-surface`, `error-text`, `error-border`; `css/input.css` → geo-800; `css/site.css:55,90,133,142`; `form-invalid-mobile.png`. |
+| `design-system-font`, `:239–249` | Uso legítimo de mono somente em código normativo e número de etapa; não é display “técnico” decorativo. Família/fallbacks e variante mobile documentados, sem alteração de UI. | `DESIGN.md` → `data`/`data-mobile`, rampa e usos; `.impeccable/design.json` → typographyMeta; `css/site.css:86,101,218`; captura desktop/mobile. |
+| `em-dash-overuse`, `:250–260` | Aceito como copy herdada dentro do escopo de preservação factual. A heurística não autoriza reescrever os 21 travessões. Não elevar isso a regra geral de voz para copy futura. | Texto preservado de serviços/processo/FAQ em `index.html`; restrição de preservação em `PRODUCT.md`; decisão explícita do usuário. |
+| `design-system-font-size`, `:261–824` | Usos intencionais, documentação agora reconciliada integralmente por papel, breakpoint e origem. Valores não foram mudados para satisfazer a heurística; a composição monumental é explicitamente pinned e separada dos títulos funcionais. | Frontmatter e tabela “Rampa completa e usos intencionais” de `DESIGN.md`; typographyMeta no sidecar; `css/site.css` nas linhas mapeadas. Sete capturas e parecer fresco não apontaram falha material de escala/leitura. |
+
+## O que permanece pendente
+
+- A adjudicação acima é uma decisão documentada sobre o relatório existente, **não uma execução verde do detector**. Qualidade deve registrar se aceita essas decisões no veredito final.
+- Tooling de dependências e rodada completa de lint/coverage/build/E2E continuam sujeitos à coordenação do Líder. Limites 80/75, aplicação inteira e baseline real não foram alterados.
+- Relatórios axe históricos contêm apenas `violations`; foram preservados como históricos. Não provam metadados/incomplete que não registraram. Próximas execuções de smoke/E2E passam a guardar o resultado axe integral, sem simular nova execução agora.
+- Alegações comerciais, prazos e associações normativas continuam herdados e não auditados; não são resolvidos por este documento visual.

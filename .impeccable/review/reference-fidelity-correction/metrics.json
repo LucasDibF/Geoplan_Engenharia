@@ -1,0 +1,207 @@
+[
+  {
+    "width": 1310,
+    "errors": [],
+    "overflow": false,
+    "titleFont": "\"Cormorant Garamond\", Georgia, serif",
+    "bodyFont": "\"DM Sans\", Arial, sans-serif",
+    "headingSize": "88px",
+    "header": {
+      "x": 15,
+      "y": 0,
+      "width": 1280,
+      "height": 135.328125,
+      "top": 0,
+      "right": 1295,
+      "bottom": 135.328125,
+      "left": 15
+    },
+    "children": [
+      {
+        "class": "brand",
+        "width": 238
+      },
+      {
+        "class": "desktop-nav",
+        "width": 364.703125
+      },
+      {
+        "class": "header-contact",
+        "width": 152.46875
+      },
+      {
+        "class": "menu-toggle",
+        "width": 0
+      }
+    ],
+    "outside": [
+      "equipment-image",
+      "",
+      ""
+    ]
+  },
+  {
+    "width": 1440,
+    "errors": [],
+    "overflow": false,
+    "titleFont": "\"Cormorant Garamond\", Georgia, serif",
+    "bodyFont": "\"DM Sans\", Arial, sans-serif",
+    "headingSize": "88px",
+    "header": {
+      "x": 80,
+      "y": 0,
+      "width": 1280,
+      "height": 135.328125,
+      "top": 0,
+      "right": 1360,
+      "bottom": 135.328125,
+      "left": 80
+    },
+    "children": [
+      {
+        "class": "brand",
+        "width": 238
+      },
+      {
+        "class": "desktop-nav",
+        "width": 364.703125
+      },
+      {
+        "class": "header-contact",
+        "width": 152.46875
+      },
+      {
+        "class": "menu-toggle",
+        "width": 0
+      }
+    ],
+    "outside": [
+      "equipment-image",
+      "",
+      ""
+    ]
+  },
+  {
+    "width": 768,
+    "errors": [],
+    "overflow": false,
+    "titleFont": "\"Cormorant Garamond\", Georgia, serif",
+    "bodyFont": "\"DM Sans\", Arial, sans-serif",
+    "headingSize": "72px",
+    "header": {
+      "x": 0,
+      "y": -3567,
+      "width": 768,
+      "height": 135.328125,
+      "top": -3567,
+      "right": 768,
+      "bottom": -3431.671875,
+      "left": 0
+    },
+    "children": [
+      {
+        "class": "brand",
+        "width": 238
+      },
+      {
+        "class": "desktop-nav",
+        "width": 350.390625
+      },
+      {
+        "class": "header-contact",
+        "width": 131.609375
+      },
+      {
+        "class": "menu-toggle",
+        "width": 0
+      }
+    ],
+    "outside": [
+      "equipment-image",
+      "",
+      ""
+    ]
+  },
+  {
+    "width": 390,
+    "errors": [],
+    "overflow": false,
+    "titleFont": "\"Cormorant Garamond\", Georgia, serif",
+    "bodyFont": "\"DM Sans\", Arial, sans-serif",
+    "headingSize": "48px",
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 127.328125,
+      "top": 0,
+      "right": 390,
+      "bottom": 127.328125,
+      "left": 0
+    },
+    "children": [
+      {
+        "class": "brand",
+        "width": 214
+      },
+      {
+        "class": "desktop-nav",
+        "width": 0
+      },
+      {
+        "class": "header-contact",
+        "width": 0
+      },
+      {
+        "class": "menu-toggle",
+        "width": 44
+      }
+    ],
+    "outside": [
+      "equipment-image",
+      "",
+      ""
+    ]
+  },
+  {
+    "width": 320,
+    "errors": [],
+    "overflow": false,
+    "titleFont": "\"Cormorant Garamond\", Georgia, serif",
+    "bodyFont": "\"DM Sans\", Arial, sans-serif",
+    "headingSize": "48px",
+    "header": {
+      "x": 0,
+      "y": -4859,
+      "width": 320,
+      "height": 127.328125,
+      "top": -4859,
+      "right": 320,
+      "bottom": -4731.671875,
+      "left": 0
+    },
+    "children": [
+      {
+        "class": "brand",
+        "width": 214
+      },
+      {
+        "class": "desktop-nav",
+        "width": 0
+      },
+      {
+        "class": "header-contact",
+        "width": 0
+      },
+      {
+        "class": "menu-toggle",
+        "width": 44
+      }
+    ],
+    "outside": [
+      "equipment-image",
+      "",
+      ""
+    ]
+  }
+]

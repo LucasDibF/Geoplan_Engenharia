@@ -1,0 +1,45 @@
+{
+  "published": false,
+  "sourceSnapshotEqual": true,
+  "environment": "frozen-local-snapshot-outside-iCloud",
+  "publicFiles": 16,
+  "unit": {
+    "passed": 71,
+    "files": 7,
+    "coverage": {
+      "statements": 99.48,
+      "branches": 98.58,
+      "functions": 100,
+      "lines": 100
+    },
+    "baselineRegressed": false
+  },
+  "e2e": {
+    "passed": 28,
+    "failed": 0,
+    "skipped": 0,
+    "retries": 0,
+    "seconds": 53.7,
+    "projects": [
+      "desktop",
+      "mobile"
+    ]
+  },
+  "rasters": {
+    "count": 2,
+    "missingProvenance": 0
+  },
+  "initialReview": "fix",
+  "qualityVerdict": {
+    "disposition": "ship",
+    "scope": "two material fixes from editorial frontend review",
+    "resolved": ["mobile FAB occlusion", "design documentation"],
+    "integratedApproval": false,
+    "publicationAuthorized": false
+  },
+  "pendingBeforePublication": [
+    "B1-technical-standards",
+    "B2-commercial-claims",
+    "final-domain"
+  ]
+}

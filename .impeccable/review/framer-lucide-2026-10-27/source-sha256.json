@@ -1,0 +1,15 @@
+{
+  "js/main.js": "f687e400e6c3c8e350585a1c505d811bddde0b6e8d416ec822e68920277b045a",
+  "js/motion.js": "b70bce8dc09a866a7d2d6995612532cc9b5388f8e74751e68dc4c063ebb5c69b",
+  "js/frontend-entry.jsx": "2aab0697854faa245adeeac7275b2a5a2dea147e26cad5f7cfbbd62b6903d847",
+  "js/ui/Hero.jsx": "3918a28e96b68c5e793e1f24bcc27e71ed0d23261d74e2b44e7cf8a6bbd71e0e",
+  "js/ui/interactions.css": "5939ebd5b3612dbcca529142941b4c815d0217a89efdac9e8b7da4c2e8cfc71c",
+  "css/site.css": "c336d5d8c013aef25a78007bc3feaea071691f2e1bf4fd66d5ad5f03c350e632",
+  "css/input.css": "ea28bc85f2a468b6507cd1fcfb33b29cf5e1bcc3895951e975f985add760f2e3",
+  "package.json": "9d75e8fbe8cbeffe46fe5f26c518f85798b044fae22936f42d5f0b43ceea7b34",
+  "pnpm-lock.yaml": "fb10c398408a24ea3bcd42c856355d9dfcc7b629b6d4559a171a7be6f47b7bff",
+  "vitest.config.js": "584947bc04b5f16c96733902db4e425cc51b200bb9dc99ef74b7380f3bf3171f",
+  "scripts/coverage-baseline.mjs": "840778f21b77efe882b3aa5a3d51181e3e20845b36e76dc86b123a7225f9b4db",
+  "index.html": "e4b3ab721a1e1356387da96bd786471372cbc42cdc1a1477f45e279774d06111",
+  "dist/js/frontend.js": "8c729db633abe1376c4fd58f3d45e9364ca3fe1d6ca5b7ff537463096bdefa4a"
+}

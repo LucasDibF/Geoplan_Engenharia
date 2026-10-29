@@ -1,0 +1,17 @@
+[WebServer] (node:75433) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 1 worker
+
+(node:75442) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/e2e/site.spec.js:36:1 › conteúdo integral, layout e contatos locais (2.7s)
+  ✓  2 [desktop] › tests/e2e/site.spec.js:274:1 › WhatsApp permanece disponível sem cobrir serviços, campos ou endereço no mobile (1.6s)
+  ✓  3 [desktop] › tests/e2e/site.spec.js:301:1 › nome completo identifica a empresa visualmente e para tecnologia assistiva (2.0s)
+(node:75479) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [mobile] › tests/e2e/site.spec.js:36:1 › conteúdo integral, layout e contatos locais (3.3s)
+  ✓  5 [mobile] › tests/e2e/site.spec.js:274:1 › WhatsApp permanece disponível sem cobrir serviços, campos ou endereço no mobile (1.8s)
+  ✓  6 [mobile] › tests/e2e/site.spec.js:301:1 › nome completo identifica a empresa visualmente e para tecnologia assistiva (1.6s)
+
+  6 passed (18.0s)

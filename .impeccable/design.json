@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T00:50:30.938290+00:00",
+  "title": "Design System: Geoplan",
+  "extensions": {
+    "colorMeta": {
+      "copper": {
+        "displayName": "copper",
+        "role": "primary",
+        "source": "css/input.css",
+        "tonalRamp": [
+          "oklch(15% 0.0445 50.27)",
+          "oklch(27% 0.0815 50.27)",
+          "oklch(39% 0.1186 50.27)",
+          "oklch(51% 0.1482 50.27)",
+          "oklch(63% 0.1482 50.27)",
+          "oklch(75% 0.1186 50.27)",
+          "oklch(87% 0.0667 50.27)",
+          "oklch(95% 0.0222 50.27)"
+        ]
+      },
+      "copper-hover": {
+        "displayName": "copper-hover",
+        "role": "primary",
+        "source": "css/input.css",
+        "tonalRamp": [
+          "oklch(15% 0.0429 48.12)",
+          "oklch(27% 0.0786 48.12)",
+          "oklch(39% 0.1143 48.12)",
+          "oklch(51% 0.1428 48.12)",
+          "oklch(63% 0.1428 48.12)",
+          "oklch(75% 0.1143 48.12)",
+          "oklch(87% 0.0643 48.12)",
+          "oklch(95% 0.0214 48.12)"
+        ]
+      },
+      "paper": {
+        "displayName": "paper",
+        "role": "neutral",
+        "source": "css/input.css",
+        "tonalRamp": [
+          "oklch(15% 0.0017 84.57)",
+          "oklch(27% 0.0032 84.57)",
+          "oklch(39% 0.0046 84.57)",
+          "oklch(51% 0.0057 84.57)",
+          "oklch(63% 0.0057 84.57)",
+          "oklch(75% 0.0046 84.57)",
+          "oklch(87% 0.0026 84.57)",
+          "oklch(95% 0.0009 84.57)"
+        ]
+      },
+      "paper-soft": {
+        "displayName": "paper-soft",
+        "role": "neutral",
+        "source": "css/input.css",
+        "tonalRamp": [
+          "oklch(15% 0.0026 84.57)",
+          "oklch(27% 0.0048 84.57)",
+          "oklch(39% 0.0069 84.57)",
+          "oklch(51% 0.0086 84.57)",
+          "oklch(63% 0.0086 84.57)",
+          "oklch(75% 0.0069 84.57)",
+          "oklch(87% 0.0039 84.57)",
+          "oklch(95% 0.0013 84.57)"
+        ]
+      },
+      "sand": {
+        "displayName": "sand",
+        "role": "neutral",
+        "source": "css/input.css",
+        "tonalRamp": [
+          "oklch(15% 0.0031 81.79)",
+          "oklch(27% 0.0057 81.79)",
+          "oklch(39% 0.0083 81.79)",
+          "oklch(51% 0.0104 81.79)",
+          "oklch(63% 0.0104 81.79)",
+          "oklch(75% 0.0083 81.79)",
+          "oklch(87% 0.0047 81.79)",
+          "oklch(95% 0.0016 81.79)"
+        ]
+      },
+      "rule": {
+        "displayName": "rule",
+        "role": "neutral",
+        "source": "css/input.css",
+        "tonalRamp": [
+          "oklch(15% 0.0035 84.58)",
+          "oklch(27% 0.0065 84.58)",
+          "oklch(39% 0.0094 84.58)",
+          "oklch(51% 0.0117 84.58)",
+          "oklch(63% 0.0117 84.58)",
+          "oklch(75% 0.0094 84.58)",
+          "oklch(87% 0.0053 84.58)",
+          "oklch(95% 0.0018 84.58)"
+        ]
+      },
+      "muted": {
+        "displayName": "muted",
+        "role": "neutral",
+        "source": "css/input.css",
+        "tonalRamp": [
+          "oklch(15% 0.0029 91.56)",
+          "oklch(27% 0.0053 91.56)",
+          "oklch(39% 0.0077 91.56)",
+          "oklch(51% 0.0096 91.56)",
+          "oklch(63% 0.0096 91.56)",
+          "oklch(75% 0.0077 91.56)",
+          "oklch(87% 0.0043 91.56)",
+          "oklch(95% 0.0014 91.56)"
+        ]
+      },
+      "charcoal-soft": {
+        "displayName": "charcoal-soft",
+        "role": "neutral",
+        "source": "css/input.css",
+        "tonalRamp": [
+          "oklch(15% 0.0023 84.59)",
+          "oklch(27% 0.0042 84.59)",
+          "oklch(39% 0.0060 84.59)",
+          "oklch(51% 0.0075 84.59)",
+          "oklch(63% 0.0075 84.59)",
+          "oklch(75% 0.0060 84.59)",
+          "oklch(87% 0.0034 84.59)",
+          "oklch(95% 0.0011 84.59)"
+        ]
+      },
+      "charcoal": {
+        "displayName": "charcoal",
+        "role": "neutral",
+        "source": "css/input.css",
+        "tonalRamp": [
+          "oklch(15% 0.0022 95.33)",
+          "oklch(27% 0.0040 95.33)",
+          "oklch(39% 0.0059 95.33)",
+          "oklch(51% 0.0073 95.33)",
+          "oklch(63% 0.0073 95.33)",
+          "oklch(75% 0.0059 95.33)",
+          "oklch(87% 0.0033 95.33)",
+          "oklch(95% 0.0011 95.33)"
+        ]
+      },
+      "deep": {
+        "displayName": "deep",
+        "role": "neutral",
+        "source": "css/input.css",
+        "tonalRamp": [
+          "oklch(15% 0.0011 106.65)",
+          "oklch(27% 0.0020 106.65)",
+          "oklch(39% 0.0029 106.65)",
+          "oklch(51% 0.0037 106.65)",
+          "oklch(63% 0.0037 106.65)",
+          "oklch(75% 0.0029 106.65)",
+          "oklch(87% 0.0017 106.65)",
+          "oklch(95% 0.0006 106.65)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Cormorant normal",
+        "purpose": "Hero; oblíquo sintetizado, sem fonte itálica real."
+      },
+      "body": {
+        "displayName": "DM Sans local",
+        "purpose": "Corpo e controles."
+      }
+    },
+    "shadows": [],
+    "breakpoints": [
+      {
+        "name": "compact",
+        "value": "1023px"
+      },
+      {
+        "name": "phone",
+        "value": "639px"
+      }
+    ],
+    "motion": [
+      {
+        "name": "hero-orbit",
+        "value": "28s ease-in-out infinite alternate",
+        "purpose": "Pausável; reduzido, oculto e fora da tela fica estático."
+      }
+    ],
+    "sourceOwnership": {
+      "css/input.css": "Tokens e cinco fontes TTF/OFL locais.",
+      "css/site.css": "Base e hierarquia.",
+      "js/ui/*.css": "Superfícies atuais."
+    },
+    "authority": "landing-page-geoplan/app/page.tsx, layout.tsx, globals.css e quatro capturas posteriores; prazos verticais.",
+    "previewRamps": "Derivações para visualização; não são tokens operativos nem evidência de detector limpo.",
+    "evidence": ".impeccable/review/reference-fidelity-correction/",
+    "historicalArchive": ".impeccable/review/reference-fidelity-correction/documentation-before/",
+    "limitations": "Baixo contraste da referência registrado; sem certificação WCAG AA. Sem publicação.",
+    "processTimeline": {
+      "desktop": "vertical",
+      "mobile": "vertical",
+      "stages": [
+        "Proposta",
+        "Assinatura",
+        "Mobilização",
+        "Execução",
+        "Entrega"
+      ]
+    },
+    "authorizedExceptions": [
+      "logo transparente",
+      "fundo animado pausável",
+      "carrossel manual de duas fotos"
+    ],
+    "serviceIconOverride": {
+      "source": "icons - solo.png provided by user",
+      "color": "#d87331",
+      "size": "36px",
+      "mapping": {
+        "SPT": "spt",
+        "Sondagem Manual": "rotativa",
+        "Percolação": "unchanged: Lucide waves",
+        "Resistividade": "resistividade",
+        "Investigações especiais": "dcp",
+        "Consultoria geotécnica": "dpl"
+      },
+      "format": "inline SVG",
+      "strokeWidth": {
+        "technical": 9,
+        "percolation": 1.8
+      }
+    },
+    "favicon": {
+      "path": "assets/favicon.png",
+      "size": "64x64",
+      "source": "PNG COR 1-02.png provided by user"
+    }
+  },
+  "components": [
+    {
+      "name": "Botão primário",
+      "kind": "button",
+      "description": "Botão primário da referência aprovada.",
+      "html": "<a class=\"ds-primary\" href=\"#contato\">Solicite uma proposta</a>",
+      "css": ".ds-primary{font:700 11px/1.5 var(--font-editorial,DM Sans,Arial,sans-serif);letter-spacing:.15em;text-transform:uppercase;padding:16px 24px;display:inline-flex;gap:20px;align-items:center;min-height:50px;border-radius:0;text-decoration:none;transition:background .2s,color .2s;background:var(--geo-500,#d87331);color:white}.ds-primary:hover{background:var(--geo-600,#bf5e22)}.ds-primary:focus-visible{outline:2px solid var(--geo-500,#d87331);outline-offset:5px}.ds-primary:active{opacity:.85}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Botão contornado",
+      "kind": "button",
+      "description": "Botão contornado da referência aprovada.",
+      "html": "<a class=\"ds-outline\" href=\"#servicos\">Conheça os serviços</a>",
+      "css": ".ds-outline{font:700 11px/1.5 var(--font-editorial,DM Sans,Arial,sans-serif);letter-spacing:.15em;text-transform:uppercase;padding:16px 24px;display:inline-flex;gap:20px;align-items:center;min-height:50px;border-radius:0;text-decoration:none;transition:background .2s,color .2s;background:var(--geo-900,#292824);color:#ffffffcc;border:1px solid #ffffff40}.ds-outline:hover{border-color:white}.ds-outline:focus-visible{outline:2px solid var(--geo-500,#d87331);outline-offset:5px}.ds-outline:active{opacity:.85}"
+    },
+    {
+      "name": "Campo de contato",
+      "kind": "input",
+      "description": "Campo de contato da referência aprovada.",
+      "html": "<label class=\"ds-label\" for=\"ds-name\">Nome completo</label><input id=\"ds-name\" class=\"ds-field\" placeholder=\"Seu nome\">",
+      "css": ".ds-label{display:block;color:#ffffff8c;background:var(--geo-900,#292824);font:700 10px/1.5 var(--font-editorial,DM Sans,Arial,sans-serif);letter-spacing:.16em;text-transform:uppercase;padding-bottom:9px}.ds-field{padding:.85rem 1rem;border:1px solid #ffffff33;border-radius:0;background:var(--geo-900,#292824);color:white;font:400 16px/1.5 var(--font-editorial,DM Sans,Arial,sans-serif)}.ds-field:hover{border-color:#ffffff66}.ds-field:focus-visible{outline:2px solid var(--geo-500,#d87331);outline-offset:2px}.ds-field::placeholder{color:#ffffff47}",
+      "refersTo": "field"
+    },
+    {
+      "name": "Navegação",
+      "kind": "nav",
+      "description": "Navegação da referência aprovada.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Principal\"><a href=\"#servicos\">Serviços</a><a href=\"#sobre\">A Geoplan</a><a href=\"#prazos\">Prazos</a></nav>",
+      "css": ".ds-nav{display:flex;gap:32px;padding:20px;background:var(--geo-900,#292824);font:500 11px/1.5 var(--font-editorial,DM Sans,Arial,sans-serif);letter-spacing:.14em;text-transform:uppercase}.ds-nav a{color:#ffffffa6;text-decoration:none}.ds-nav a:hover{color:var(--geo-500,#d87331)}.ds-nav a:focus-visible{outline:2px solid var(--geo-500,#d87331);outline-offset:5px}"
+    },
+    {
+      "name": "Serviço",
+      "kind": "card",
+      "description": "Serviço da referência aprovada.",
+      "html": "<article class=\"ds-service\"><span>01</span><h3>SPT</h3><p>Standard Penetration Test para caracterização do subsolo e suporte ao dimensionamento de fundações.</p></article>",
+      "css": ".ds-service{padding:28px 40px;background:var(--geo-900,#292824);color:white;border-bottom:1px solid #ffffff26}.ds-service:hover{background:var(--geo-800,#33312d)}.ds-service span{color:#ffffff4d;font:12px/1.5 monospace}.ds-service h3{font:400 24px/32px var(--font-gallery,Cormorant Garamond,Georgia,serif);margin:48px 0 12px}.ds-service p{font:400 14px/24px var(--font-editorial,DM Sans,Arial,sans-serif);color:#ffffff73;margin:0}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Referência Geoplan aprovada",
+    "overview": "Reconstrução literal da referência landing-page-geoplan e das quatro capturas fornecidas após a rejeição da interpretação anterior. Carvão, papel e cobre, serif expressiva e texto utilitário definem o sistema observado; não há nova direção criativa a escolher.",
+    "keyCharacteristics": [
+      "Serif Cormorant e DM Sans locais.",
+      "Campos escuros, cobre e superfícies claras alternadas.",
+      "Filetes, círculos e diagonais da referência."
+    ],
+    "rules": [],
+    "dos": [
+      "Do reproduzir a pasta e as capturas aprovadas, incluindo kickers, gradientes e diagonais.",
+      "Do manter a logo transparente, o fundo pausável e o carrossel manual autorizados.",
+      "Do manter fontes locais reais e suas licenças."
+    ],
+    "donts": [
+      "Don't restaurar fontes, dez serviços ou seções da interpretação rejeitada.",
+      "Don't carregar itálico real: o destaque usa oblíquo sintetizado do Cormorant normal.",
+      "Don't apresentar mailto como envio SMTP ou upload, nem os testes como certificação WCAG AA."
+    ]
+  }
+}

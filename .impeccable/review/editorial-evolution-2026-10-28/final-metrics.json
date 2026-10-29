@@ -1,0 +1,319 @@
+{
+  "captureMotion": "reduced-to-settle",
+  "views": [
+    {
+      "width": 1440,
+      "errors": [],
+      "overflow": false,
+      "photo": {
+        "x": 781.34375,
+        "y": 273.53125,
+        "width": 618.640625,
+        "height": 475.1875,
+        "top": 273.53125,
+        "right": 1399.984375,
+        "bottom": 748.71875,
+        "left": 781.34375
+      },
+      "cta": {
+        "x": 40,
+        "y": 413.09375,
+        "width": 416,
+        "height": 75.78125,
+        "top": 413.09375,
+        "right": 456,
+        "bottom": 488.875,
+        "left": 40
+      },
+      "signature": {
+        "x": 40,
+        "y": 564.71875,
+        "width": 683.75,
+        "height": 184,
+        "top": 564.71875,
+        "right": 723.75,
+        "bottom": 748.71875,
+        "left": 40
+      },
+      "height": 1000,
+      "footerActionPosition": "static"
+    },
+    {
+      "width": 1280,
+      "errors": [],
+      "overflow": false,
+      "photo": {
+        "x": 694.3125,
+        "y": 254.703125,
+        "width": 545.671875,
+        "height": 441.40625,
+        "top": 254.703125,
+        "right": 1239.984375,
+        "bottom": 696.109375,
+        "left": 694.3125
+      },
+      "cta": {
+        "x": 40,
+        "y": 394.265625,
+        "width": 416,
+        "height": 75.78125,
+        "top": 394.265625,
+        "right": 456,
+        "bottom": 470.046875,
+        "left": 40
+      },
+      "signature": {
+        "x": 40,
+        "y": 533.8125,
+        "width": 603.125,
+        "height": 162.296875,
+        "top": 533.8125,
+        "right": 643.125,
+        "bottom": 696.109375,
+        "left": 40
+      },
+      "height": 1000,
+      "footerActionPosition": "static"
+    },
+    {
+      "width": 1024,
+      "errors": [],
+      "overflow": false,
+      "photo": {
+        "x": 555.046875,
+        "y": 224.5625,
+        "width": 428.9375,
+        "height": 406.6875,
+        "top": 224.5625,
+        "right": 983.984375,
+        "bottom": 631.25,
+        "left": 555.046875
+      },
+      "cta": {
+        "x": 40,
+        "y": 364.125,
+        "width": 416,
+        "height": 75.78125,
+        "top": 364.125,
+        "right": 456,
+        "bottom": 439.90625,
+        "left": 40
+      },
+      "signature": {
+        "x": 40,
+        "y": 503.671875,
+        "width": 474.09375,
+        "height": 127.578125,
+        "top": 503.671875,
+        "right": 514.09375,
+        "bottom": 631.25,
+        "left": 40
+      },
+      "height": 1000,
+      "footerActionPosition": "static"
+    },
+    {
+      "width": 900,
+      "errors": [],
+      "overflow": false,
+      "photo": {
+        "x": 487.59375,
+        "y": 216.59375,
+        "width": 372.390625,
+        "height": 400,
+        "top": 216.59375,
+        "right": 859.984375,
+        "bottom": 616.59375,
+        "left": 487.59375
+      },
+      "cta": {
+        "x": 40,
+        "y": 356.15625,
+        "width": 411.59375,
+        "height": 75.78125,
+        "top": 356.15625,
+        "right": 451.59375,
+        "bottom": 431.9375,
+        "left": 40
+      },
+      "signature": {
+        "x": 40,
+        "y": 505.84375,
+        "width": 411.59375,
+        "height": 110.75,
+        "top": 505.84375,
+        "right": 451.59375,
+        "bottom": 616.59375,
+        "left": 40
+      },
+      "height": 1000,
+      "footerActionPosition": "static"
+    },
+    {
+      "width": 768,
+      "errors": [],
+      "overflow": false,
+      "photo": {
+        "x": 415.78125,
+        "y": 256.390625,
+        "width": 312.203125,
+        "height": 400,
+        "top": 256.390625,
+        "right": 727.984375,
+        "bottom": 656.390625,
+        "left": 415.78125
+      },
+      "cta": {
+        "x": 40,
+        "y": 395.953125,
+        "width": 345.0625,
+        "height": 75.78125,
+        "top": 395.953125,
+        "right": 385.0625,
+        "bottom": 471.734375,
+        "left": 40
+      },
+      "signature": {
+        "x": 40,
+        "y": 563.546875,
+        "width": 345.0625,
+        "height": 92.84375,
+        "top": 563.546875,
+        "right": 385.0625,
+        "bottom": 656.390625,
+        "left": 40
+      },
+      "height": 1000,
+      "footerActionPosition": "static"
+    },
+    {
+      "width": 700,
+      "errors": [],
+      "overflow": false,
+      "photo": {
+        "x": 20,
+        "y": 517.125,
+        "width": 660,
+        "height": 368,
+        "top": 517.125,
+        "right": 680,
+        "bottom": 885.125,
+        "left": 20
+      },
+      "cta": {
+        "x": 20,
+        "y": 381.859375,
+        "width": 416,
+        "height": 74.703125,
+        "top": 381.859375,
+        "right": 436,
+        "bottom": 456.5625,
+        "left": 20
+      },
+      "signature": {
+        "x": 20,
+        "y": 909.125,
+        "width": 660,
+        "height": 177.59375,
+        "top": 909.125,
+        "right": 680,
+        "bottom": 1086.71875,
+        "left": 20
+      },
+      "height": 844,
+      "footerActionPosition": "static"
+    },
+    {
+      "width": 390,
+      "errors": [],
+      "overflow": false,
+      "photo": {
+        "x": 20,
+        "y": 570.828125,
+        "width": 350,
+        "height": 256,
+        "top": 570.828125,
+        "right": 370,
+        "bottom": 826.828125,
+        "left": 20
+      },
+      "cta": {
+        "x": 20,
+        "y": 435.5625,
+        "width": 350,
+        "height": 74.703125,
+        "top": 435.5625,
+        "right": 370,
+        "bottom": 510.265625,
+        "left": 20
+      },
+      "signature": {
+        "x": 20,
+        "y": 850.828125,
+        "width": 350,
+        "height": 94.171875,
+        "top": 850.828125,
+        "right": 370,
+        "bottom": 945,
+        "left": 20
+      },
+      "height": 844,
+      "footerActionPosition": "static"
+    },
+    {
+      "width": 320,
+      "errors": [],
+      "overflow": false,
+      "photo": {
+        "x": 16,
+        "y": 587,
+        "width": 288,
+        "height": 256,
+        "top": 587,
+        "right": 304,
+        "bottom": 843,
+        "left": 16
+      },
+      "cta": {
+        "x": 16,
+        "y": 451.734375,
+        "width": 288,
+        "height": 74.703125,
+        "top": 451.734375,
+        "right": 304,
+        "bottom": 526.4375,
+        "left": 16
+      },
+      "signature": {
+        "x": 16,
+        "y": 867,
+        "width": 288,
+        "height": 77.484375,
+        "top": 867,
+        "right": 304,
+        "bottom": 944.484375,
+        "left": 16
+      },
+      "height": 844,
+      "footerActionPosition": "static"
+    }
+  ],
+  "publicHashes": {
+    "assets/ui-LICENSES.txt": "ff59132ed77c50d6dc4191a739a114d3c11182889f4e8d201b6646f7c5e1c158",
+    "index.html": "f6033c3413c23b45d20049d8436625eabf08d3a9a51bb3c3fc01230e8c85cd30",
+    "css/styles.css": "5f1922f4ab8300013bce1264e3cc78a9b033e3c60c04663b12186dbd6705dd69",
+    "css/site.css": "56191ff641a148c59f4a5fe9c5d8107881260c9b41f4fee4359f7635d356b765",
+    "js/main.js": "f687e400e6c3c8e350585a1c505d811bddde0b6e8d416ec822e68920277b045a",
+    "js/frontend.js": "3ef44c489536861f5bab47ade71118f0183227825213642e0b3b6f1378c53794",
+    "js/frontend.css": "5c20476ec817bb1fe341b78ee2340fc184e2811dc887794c938a1361a2b4b5b8",
+    "assets/logo.png": "e6f0bc87f23b195e548aa697e8a11bbbc0b5b63eea9e0f1ddf0166e1a8a1e3dd",
+    "assets/hero-bg.jpg": "146f3f04a0a257eda224637d1f97d94bfea3d6964fa780a4bfd7e2d04400c152",
+    "assets/favicon.svg": "e0edf465d6ab6a7ac83364fff3224693ee5178cc1148a97826e31f343ea4ce16",
+    "assets/strata.svg": "025f1b57672179ac8d26006c60b0085629b5b927d4e8e5efdb5b5600d15cd953",
+    "assets/fonts/archivo-latin-wght-normal.woff2": "8f704806dbedeaaeca334b11ec348bc3ac3a439d6431544b3afb54f534ee4967",
+    "assets/fonts/bodoni-moda-latin-wght-normal.woff2": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2",
+    "assets/fonts/bodoni-moda-latin-wght-italic.woff2": "e50a00b8431381bd33c7676c50ffb98fc95f4a06c707ea44d04a423266e211cd",
+    "assets/fonts/archivo-OFL.txt": "c3c8402eec0e31dc9a76851235b1c02a0bb821488b2db8e35bcc2ab60ca8fc2b",
+    "assets/fonts/bodoni-moda-OFL.txt": "6c64f717433eadd29b058d6254fe25c1ee2d249ce3772f843bb21f73285779c2"
+  }
+}

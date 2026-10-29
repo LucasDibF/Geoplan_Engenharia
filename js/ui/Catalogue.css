@@ -1,0 +1,27 @@
+/* Sobre e seis soluções exatamente como no conteúdo da pasta. */
+.about { border-bottom: 1px solid var(--geo-300); background: var(--geo-50); }
+.about-layout { display: grid; grid-template-columns: minmax(0,.72fr) minmax(0,1.28fr); gap: 64px; }
+.about h2 { max-width: 384px; margin-top: 20px; line-height: 1.25; }
+.about h2 span { color: var(--geo-500); }
+.about-copy { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px; max-width: 672px; color: var(--geo-700); font-size: 15px; line-height: 28px; }
+.about-facts { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 16px 48px; margin-top: 8px; padding-top: 24px; border-top: 1px solid var(--geo-300); color: var(--geo-900); font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.about-facts > span { display: inline-flex; align-items: baseline; white-space: nowrap; }
+.about-facts strong { margin-right: 8px; color: var(--geo-500); font-size: 24px; line-height: 32px; font-weight: 400; letter-spacing: normal; }
+.services { color: #fff; background: var(--geo-900); }
+.services-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 56px; }
+.services .eyebrow { color: var(--geo-500); }
+.services h2 { margin-top: 20px; }
+.services-heading > p { max-width: 320px; font-size: 14px; line-height: 24px; color: #ffffff73; }
+.service-catalog { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border-top: 1px solid #ffffff26; }
+.service-entry { padding: 28px 40px 28px 0; border-bottom: 1px solid #ffffff26; transition: background .2s; }
+.service-entry:not(:nth-child(3n+1)) { border-left: 1px solid #ffffff26; padding-left: 32px; }
+.service-entry:hover { background: #ffffff08; }
+.service-marker { display: flex; align-items: flex-start; justify-content: space-between; }
+.service-marker > svg { margin-left: 8px; }
+.service-marker .icon { width: 36px; height: 36px; color: var(--geo-500); stroke-width: 1.8; }
+.service-marker .service-symbol { display: block; flex-shrink: 0; width: 36px; height: 36px; color: var(--geo-500); stroke-width: 9; }
+.service-index { color: #ffffff4d; font: 12px/1.5 ui-monospace,monospace; }
+.geoplan .service-entry h3 { margin-top: 48px; font-size: 24px; line-height: 32px; }
+.service-entry > p { margin-top: 12px; font-size: 14px; line-height: 24px; color: #ffffff73; }
+@media (max-width: 1023px) { .about-layout { grid-template-columns: minmax(0,1fr); } .service-catalog { grid-template-columns: repeat(2,minmax(0,1fr)); } .service-entry:not(:nth-child(3n+1)) { border-left: 0; padding-left: 0; } }
+@media (max-width: 639px) { .about-copy { grid-template-columns: minmax(0,1fr); } .services-heading { flex-direction: column; align-items: flex-start; } .service-catalog { grid-template-columns: minmax(0,1fr); } .service-entry { padding-right: 28px; } }

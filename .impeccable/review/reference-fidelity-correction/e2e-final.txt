@@ -1,0 +1,29 @@
+[WebServer] (node:91070) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 18 tests using 1 worker
+
+(node:91078) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › tests/e2e/site.spec.js:22:1 › conteúdo literal e composição da pasta, com seis serviços e sobre restaurado (2.4s)
+  ✓   2 [desktop] › tests/e2e/site.spec.js:36:1 › fontes e composição responsiva sem overflow de 320 a 1600 (1.8s)
+  ✓   3 [desktop] › tests/e2e/site.spec.js:53:1 › teclado, âncoras e menu mobile funcionais (2.6s)
+  ✓   4 [desktop] › tests/e2e/site.spec.js:66:1 › formulário da referência valida e prepara e-mail sem transmitir (2.0s)
+  ✓   5 [desktop] › tests/e2e/site.spec.js:77:1 › carrossel autorizado funciona por botão, teclado e scroll (1.2s)
+  ✓   6 [desktop] › tests/e2e/site.spec.js:86:1 › fundo animado preserva a referência e pausa por preferência e visibilidade (915ms)
+  ✓   7 [desktop] › tests/e2e/site.spec.js:97:1 › HTML pré-renderizado e contato continuam acessíveis sem JavaScript (1.7s)
+  ✓   8 [desktop] › tests/e2e/site.spec.js:105:1 › build restrito à allowlist e nenhum documento interno publicado (735ms)
+  ✓   9 [desktop] › tests/e2e/site.spec.js:111:1 › auditoria semântica e registro transparente do contraste literal da referência (1.8s)
+(node:91177) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [mobile] › tests/e2e/site.spec.js:22:1 › conteúdo literal e composição da pasta, com seis serviços e sobre restaurado (667ms)
+  ✓  11 [mobile] › tests/e2e/site.spec.js:36:1 › fontes e composição responsiva sem overflow de 320 a 1600 (722ms)
+  ✓  12 [mobile] › tests/e2e/site.spec.js:53:1 › teclado, âncoras e menu mobile funcionais (3.4s)
+  ✓  13 [mobile] › tests/e2e/site.spec.js:66:1 › formulário da referência valida e prepara e-mail sem transmitir (809ms)
+  ✓  14 [mobile] › tests/e2e/site.spec.js:77:1 › carrossel autorizado funciona por botão, teclado e scroll (606ms)
+  ✓  15 [mobile] › tests/e2e/site.spec.js:86:1 › fundo animado preserva a referência e pausa por preferência e visibilidade (602ms)
+  ✓  16 [mobile] › tests/e2e/site.spec.js:97:1 › HTML pré-renderizado e contato continuam acessíveis sem JavaScript (885ms)
+  ✓  17 [mobile] › tests/e2e/site.spec.js:105:1 › build restrito à allowlist e nenhum documento interno publicado (625ms)
+  ✓  18 [mobile] › tests/e2e/site.spec.js:111:1 › auditoria semântica e registro transparente do contraste literal da referência (1.7s)
+
+  18 passed (29.2s)

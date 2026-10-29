@@ -1,0 +1,19 @@
+{
+  "index.html": "f6033c3413c23b45d20049d8436625eabf08d3a9a51bb3c3fc01230e8c85cd30",
+  "css/input.css": "bf5d06fd1a3f1104b8401edaf0b8e57444b87917651124c1eb005c3cf7e48346",
+  "css/site.css": "56191ff641a148c59f4a5fe9c5d8107881260c9b41f4fee4359f7635d356b765",
+  "js/main.js": "f687e400e6c3c8e350585a1c505d811bddde0b6e8d416ec822e68920277b045a",
+  "js/motion.js": "b70bce8dc09a866a7d2d6995612532cc9b5388f8e74751e68dc4c063ebb5c69b",
+  "js/frontend-entry.jsx": "ed55cfb5d7fc66f1f4e8252d3566cb37e035cfee4f1d039f89ef2531811899b8",
+  "js/ui/Hero.jsx": "2795ad71aac60393b8a70e5ae20e47916aa83a24e8a0cde1748a1126358c69a3",
+  "js/ui/interactions.css": "6a7681394ce5589675310daeafe0313d5079733f86adaaaa579e444a683e398b",
+  "js/ui/Chrome.css": "2e6363cae28aefcca051bf7b6e14ccdb6f7f8e8727465b278d23a84d50401eba",
+  "js/ui/Catalogue.css": "f5316d79e41e34e0ef731a65659ed24582fa510a4d2cb3fedc4d57c429707a37",
+  "js/ui/Contact.css": "cd4acdf0464f8dca4cf8ddcf0f5b3225ed7e162e66970671061d724858b2316c",
+  "package.json": "9d75e8fbe8cbeffe46fe5f26c518f85798b044fae22936f42d5f0b43ceea7b34",
+  "pnpm-lock.yaml": "fb10c398408a24ea3bcd42c856355d9dfcc7b629b6d4559a171a7be6f47b7bff",
+  "vitest.config.js": "584947bc04b5f16c96733902db4e425cc51b200bb9dc99ef74b7380f3bf3171f",
+  "playwright.config.js": "0e7369a3ba24a50bf8e57d4c617f5772367b069a23f73b5dbe82cd9706cce48d",
+  "tests/e2e/site.spec.js": "a094edeb6da70c9f9c6276f77666227d771f8aa38e6b6d285a6aefa29a98d0ec",
+  "tests/fixtures/editorial-content-before.json": "096b8d9da4af31c53ffde21899a21e4ea1bb1ca96bcd9743d7bccdd032d04db0"
+}

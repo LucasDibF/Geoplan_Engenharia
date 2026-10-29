@@ -1,0 +1,23 @@
+/* Base única da referência: medidas, fontes e hierarquia. */
+.geoplan { margin: 0; background: var(--geo-50); color: var(--geo-950); font-family: var(--font-editorial); -webkit-font-smoothing: antialiased; line-height: 1.5; scrollbar-color: var(--geo-500) var(--geo-900); }
+.geoplan * { box-sizing: border-box; }
+.geoplan ::selection { background: var(--geo-500); color: #fff; }
+.geoplan :focus-visible { outline: 2px solid var(--geo-500); outline-offset: 5px; }
+.geoplan a { color: inherit; }
+.geoplan h1,.geoplan h2,.geoplan h3 { font-family: var(--font-gallery); font-weight: 400; }
+.geoplan h2 { font-size: 3rem; line-height: 1.25; letter-spacing: -.03em; }
+.geoplan h3 { font-size: 1.5rem; line-height: 1.33; }
+.geoplan .page-width { width: 100%; max-width: 1280px; padding-inline: 40px; margin-inline: auto; }
+.geoplan .section-space { padding-block: 128px; }
+.geoplan .eyebrow { margin: 0; font-size: 10px; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; }
+.geoplan .icon { flex-shrink: 0; width: 17px; height: 17px; }
+.geoplan .button { display: inline-flex; align-items: center; justify-content: center; gap: 20px; min-height: 50px; padding: 16px 24px; font: 700 11px/1.5 var(--font-editorial); letter-spacing: .15em; text-transform: uppercase; transition: background .2s,color .2s; }
+.geoplan .button-primary { color: #fff; background: var(--geo-500); }
+.geoplan .button-primary:hover { background: var(--geo-600); }
+.geoplan .button:disabled { cursor: wait; opacity: .7; }
+.geoplan .skip-link { position: fixed; top: 1rem; left: 1rem; z-index: 100; padding: 1rem; background: var(--geo-950); color: #fff; transform: translateY(-180%); }
+.geoplan .skip-link:focus { transform: none; }
+.geoplan .anchor-alias { display: block; position: relative; top: -1rem; }
+@media (max-width: 1023px) { .geoplan .page-width { padding-inline: 24px; } .geoplan .section-space { padding-block: 96px; } }
+@media (max-width: 639px) { .geoplan h2 { font-size: 2.25rem; } }
+@media (prefers-reduced-motion: reduce) { .geoplan *, .geoplan *::before,.geoplan *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }

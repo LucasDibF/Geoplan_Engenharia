@@ -1,0 +1,106 @@
+
+> geoplan-institucional@1.0.0 prepare:preview /private/var/folders/3l/8vdlyzkn1m19f_0by0jjxnfh0000gn/T/opencode/geoplan-ui-Xwn7HG
+> node scripts/prepare-preview.mjs
+
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+Rebuilding...
+
+Done in 194ms.
+Prévia da raiz preparada: Hero SSR, bundle UI, CSS compilado e duas fontes locais. dist não foi gerado.
+
+> geoplan-institucional@1.0.0 build /private/var/folders/3l/8vdlyzkn1m19f_0by0jjxnfh0000gn/T/opencode/geoplan-ui-Xwn7HG
+> node scripts/build.mjs
+
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+Rebuilding...
+
+Done in 185ms.
+Build: 16 arquivos públicos em /private/var/folders/3l/8vdlyzkn1m19f_0by0jjxnfh0000gn/T/opencode/geoplan-ui-Xwn7HG/dist
+
+> geoplan-institucional@1.0.0 lint /private/var/folders/3l/8vdlyzkn1m19f_0by0jjxnfh0000gn/T/opencode/geoplan-ui-Xwn7HG
+> node --check js/main.js && node --check js/motion.js && html-validate index.html && node scripts/check-public.mjs
+
+HTML e fronteira pública verificados.
+
+> geoplan-institucional@1.0.0 test /private/var/folders/3l/8vdlyzkn1m19f_0by0jjxnfh0000gn/T/opencode/geoplan-ui-Xwn7HG
+> vitest run --coverage && node scripts/coverage-baseline.mjs
+
+
+ RUN  v4.1.12 /private/var/folders/3l/8vdlyzkn1m19f_0by0jjxnfh0000gn/T/opencode/geoplan-ui-Xwn7HG
+      Coverage enabled with v8
+
+ ✓ tests/unit/rendering-contract.test.js (2 tests) 17ms
+ ✓ tests/unit/browser-health.test.js (14 tests) 40ms
+ ✓ tests/unit/content-preservation.test.js (3 tests) 90ms
+ ✓ tests/unit/frontend.test.js (2 tests) 277ms
+ ✓ tests/unit/hero.test.js (12 tests) 493ms
+ ✓ tests/unit/main.test.js (22 tests) 2457ms
+     ✓ abre, fecha, mantém foco e fecha com Escape  409ms
+ ✓ tests/unit/motion.test.js (16 tests) 2522ms
+     ✓ nega reduced motion e navegadores sem requisitos  304ms
+
+ Test Files  7 passed (7)
+      Tests  71 passed (71)
+   Start at  10:14:44
+   Duration  10.33s (transform 1.84s, setup 0ms, import 4.11s, tests 5.90s, environment 37.21s)
+
+JSON report written to /private/var/folders/3l/8vdlyzkn1m19f_0by0jjxnfh0000gn/T/opencode/geoplan-ui-Xwn7HG/coverage/unit-results.json
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   99.48 |    98.58 |     100 |     100 |                   
+ js                |   99.39 |     98.5 |     100 |     100 |                   
+  motion.js        |   98.85 |    97.05 |     100 |     100 | 24,78,172         
+-------------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 99.48% ( 383/385 )
+Branches     : 98.58% ( 209/212 )
+Functions    : 100% ( 88/88 )
+Lines        : 100% ( 304/304 )
+================================================================================
+Cobertura dentro dos limites, sem queda contra a baseline.
+
+> geoplan-institucional@1.0.0 test:e2e /private/var/folders/3l/8vdlyzkn1m19f_0by0jjxnfh0000gn/T/opencode/geoplan-ui-Xwn7HG
+> playwright test
+
+
+Running 28 tests using 5 workers
+
+  ✓   4 [desktop] › tests/e2e/site.spec.js:74:1 › leitura mobile, campos sem zoom e contato agrupado (7.8s)
+  ✓   5 [desktop] › tests/e2e/site.spec.js:57:1 › teclado, menu mobile e FAQ nativo (8.1s)
+  ✓   3 [desktop] › tests/e2e/site.spec.js:97:1 › formulário inválido, e-mail inválido e mensagem válida sem abrir aplicativo (11.9s)
+  ✓   2 [desktop] › tests/e2e/site.spec.js:121:1 › reduced motion, foco visível e contraste acessível (14.3s)
+  ✓   1 [desktop] › tests/e2e/site.spec.js:36:1 › conteúdo integral, layout e contatos locais (14.3s)
+  ✓   7 [desktop] › tests/e2e/site.spec.js:148:1 › build publica somente a allowlist e não expõe documentação (6.4s)
+  ✓   6 [desktop] › tests/e2e/site.spec.js:133:1 › movimento arma, termina e nunca é pré-requisito para ler (9.8s)
+  ✓   9 [desktop] › tests/e2e/site.spec.js:177:1 › movimento reduzido dinâmico cancela a abertura e mantém a leitura (6.8s)
+  ✓  10 [desktop] › tests/e2e/site.spec.js:191:1 › reduced motion durante hover e pressão cancela controles ativos (6.9s)
+  ✓  12 [desktop] › tests/e2e/site.spec.js:225:1 › abertura editorial moderna preserva prioridades e fotografia em cada largura (5.4s)
+  ✓   8 [desktop] › tests/e2e/site.spec.js:157:1 › HTML aparece mesmo antes do bundle React e hidratação preserva os nós (11.6s)
+  ✓  11 [desktop] › tests/e2e/site.spec.js:205:1 › sem JS: contato seguro, navegação compacta e nenhum dado na URL (9.6s)
+  ✓  13 [desktop] › tests/e2e/site.spec.js:252:1 › catálogo adapta a leitura pela coluna sem recorte ou coluna implícita (3.9s)
+  ✓  14 [desktop] › tests/e2e/site.spec.js:271:1 › WhatsApp permanece disponível sem cobrir serviços, campos ou endereço no mobile (4.4s)
+  ✓  16 [mobile] › tests/e2e/site.spec.js:74:1 › leitura mobile, campos sem zoom e contato agrupado (4.5s)
+  ✓  15 [mobile] › tests/e2e/site.spec.js:57:1 › teclado, menu mobile e FAQ nativo (6.0s)
+  ✓  17 [mobile] › tests/e2e/site.spec.js:36:1 › conteúdo integral, layout e contatos locais (6.7s)
+  ✓  21 [mobile] › tests/e2e/site.spec.js:148:1 › build publica somente a allowlist e não expõe documentação (3.6s)
+  ✓  20 [mobile] › tests/e2e/site.spec.js:133:1 › movimento arma, termina e nunca é pré-requisito para ler (6.3s)
+  ✓  18 [mobile] › tests/e2e/site.spec.js:97:1 › formulário inválido, e-mail inválido e mensagem válida sem abrir aplicativo (7.5s)
+  ✓  23 [mobile] › tests/e2e/site.spec.js:177:1 › movimento reduzido dinâmico cancela a abertura e mantém a leitura (4.0s)
+  ✓  19 [mobile] › tests/e2e/site.spec.js:121:1 › reduced motion, foco visível e contraste acessível (9.6s)
+  ✓  24 [mobile] › tests/e2e/site.spec.js:191:1 › reduced motion durante hover e pressão cancela controles ativos (4.8s)
+  ✓  22 [mobile] › tests/e2e/site.spec.js:157:1 › HTML aparece mesmo antes do bundle React e hidratação preserva os nós (9.6s)
+  ✓  26 [mobile] › tests/e2e/site.spec.js:225:1 › abertura editorial moderna preserva prioridades e fotografia em cada largura (5.0s)
+  ✓  25 [mobile] › tests/e2e/site.spec.js:205:1 › sem JS: contato seguro, navegação compacta e nenhum dado na URL (6.8s)
+  ✓  27 [mobile] › tests/e2e/site.spec.js:252:1 › catálogo adapta a leitura pela coluna sem recorte ou coluna implícita (4.5s)
+  ✓  28 [mobile] › tests/e2e/site.spec.js:271:1 › WhatsApp permanece disponível sem cobrir serviços, campos ou endereço no mobile (4.8s)
+
+  28 passed (53.7s)

@@ -1,0 +1,28 @@
+{
+  "reference": {
+    "app/page.tsx": "9917ef5167178cfe90c8a48a4f2e053c15ab1891e2e56a773ed7f46574296c1e",
+    "app/layout.tsx": "35b2defaabb0a91c2372a1801a2dd2f74f052fb2301347735c03cf701ee5553b",
+    "app/globals.css": "8d846753cf7a27a83ae8dcf9e8494c25090fe8e3c682f68031e0d0752ba80491"
+  },
+  "public": {
+    "index.html": "a01e6e6567e333b51e36f538df9e038a73e9aefa53e7d079b08c47b317fa060c",
+    "css/styles.css": "fdeab285187cfa546b5d74f85dc4f0edb80fa41b2f1d249188affdea5b3ab3bb",
+    "css/site.css": "d1e3e3c7af318977e15dff44a19ab324b3810a8e4185172d71575accbef08980",
+    "js/frontend.js": "c9c3e1ad655011f16e507ba11ba3376dc50ac91c6ec04e823be68894dc2c805b",
+    "js/main.js": "cbc9eedb69fea0c9ca033deba65ec91ceb0ae6688c449cefbc5d139b0dec05c5",
+    "js/frontend.css": "2c523d7324a5e975cd7937c53ff8272ed43e34504e5e9f962eef771aa756c23e",
+    "assets/hero-bg.jpg": "146f3f04a0a257eda224637d1f97d94bfea3d6964fa780a4bfd7e2d04400c152",
+    "assets/equipment-field.jpg": "3d4a184f6d7221a9b6a70056731f632f3ced0cc73106253d1a395e538099c530",
+    "assets/ui-LICENSES.txt": "ff59132ed77c50d6dc4191a739a114d3c11182889f4e8d201b6646f7c5e1c158",
+    "assets/logo.png": "cae6b4a110dc96464c3b9d8a69caafb774d308c0d1aab877f1c42079da82b976",
+    "assets/strata.svg": "025f1b57672179ac8d26006c60b0085629b5b927d4e8e5efdb5b5600d15cd953",
+    "assets/favicon.svg": "e0edf465d6ab6a7ac83364fff3224693ee5178cc1148a97826e31f343ea4ce16",
+    "assets/fonts/dm-sans-700-normal.ttf": "2a8e7f713ee79fbccdef3cef5c787aff47580299f7da60144961e7db2ec08211",
+    "assets/fonts/dm-sans-600-normal.ttf": "b79a2ea7a38f33fd96a282fadb9ce97626bb0724a44d21075859f0e50239993a",
+    "assets/fonts/dm-sans-OFL.txt": "9af36190332437f5ecd09974de43c1f7c77a310a996cdd8ceb25628b458840e1",
+    "assets/fonts/cormorant-garamond-400-normal.ttf": "6d37a86241a25d63f8fe6018b4c083449886b7165c1acb15edd0f574f690ecf7",
+    "assets/fonts/dm-sans-400-normal.ttf": "b0ae3e89a7d3ef2b1838bb4b1ceb0b17cc3435af061eee809d76aa623ff116e9",
+    "assets/fonts/dm-sans-500-normal.ttf": "376427b5322148d8de1e03f263bcca4935a2d60ba71d9f94f4947ab664c711ae",
+    "assets/fonts/cormorant-garamond-OFL.txt": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+  }
+}

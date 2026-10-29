@@ -1,0 +1,57 @@
+[WebServer] (node:64596) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 30 tests using 5 workers
+
+(node:64602) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:64600) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:64603) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:64599) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:64601) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 [desktop] › tests/e2e/site.spec.js:74:1 › leitura mobile, campos sem zoom e contato agrupado (8.9s)
+  ✓   2 [desktop] › tests/e2e/site.spec.js:57:1 › teclado, menu mobile e FAQ nativo (9.9s)
+  ✓   4 [desktop] › tests/e2e/site.spec.js:36:1 › conteúdo integral, layout e contatos locais (14.2s)
+  ✓   5 [desktop] › tests/e2e/site.spec.js:97:1 › formulário inválido, e-mail inválido e mensagem válida sem abrir aplicativo (14.8s)
+  ✓   1 [desktop] › tests/e2e/site.spec.js:121:1 › reduced motion, foco visível e contraste acessível (15.3s)
+  ✓   6 [desktop] › tests/e2e/site.spec.js:133:1 › movimento arma, termina e nunca é pré-requisito para ler (7.8s)
+  ✓   9 [desktop] › tests/e2e/site.spec.js:177:1 › movimento reduzido dinâmico cancela a abertura e mantém a leitura (4.5s)
+  ✓  10 [desktop] › tests/e2e/site.spec.js:191:1 › reduced motion durante hover e pressão cancela controles ativos (4.5s)
+  ✓   7 [desktop] › tests/e2e/site.spec.js:148:1 › build publica somente a allowlist e não expõe documentação (11.5s)
+  ✓   8 [desktop] › tests/e2e/site.spec.js:157:1 › HTML aparece mesmo antes do bundle React e hidratação preserva os nós (8.2s)
+  ✓  12 [desktop] › tests/e2e/site.spec.js:225:1 › abertura inspirada na referência preserva prioridades e fotografia em cada largura (3.8s)
+  ✓  11 [desktop] › tests/e2e/site.spec.js:205:1 › sem JS: contato seguro, navegação compacta e nenhum dado na URL (6.1s)
+  ✓  13 [desktop] › tests/e2e/site.spec.js:255:1 › catálogo adapta a leitura pela coluna sem recorte ou coluna implícita (4.3s)
+  ✓  15 [desktop] › tests/e2e/site.spec.js:301:1 › nome completo identifica a empresa visualmente e para tecnologia assistiva (2.4s)
+(node:64837) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:64840) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  14 [desktop] › tests/e2e/site.spec.js:274:1 › WhatsApp permanece disponível sem cobrir serviços, campos ou endereço no mobile (3.4s)
+(node:64850) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:64855) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:64860) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  16 [mobile] › tests/e2e/site.spec.js:57:1 › teclado, menu mobile e FAQ nativo (5.1s)
+  ✓  17 [mobile] › tests/e2e/site.spec.js:36:1 › conteúdo integral, layout e contatos locais (6.4s)
+  ✓  18 [mobile] › tests/e2e/site.spec.js:74:1 › leitura mobile, campos sem zoom e contato agrupado (7.0s)
+  ✓  22 [mobile] › tests/e2e/site.spec.js:148:1 › build publica somente a allowlist e não expõe documentação (5.5s)
+  ✓  21 [mobile] › tests/e2e/site.spec.js:133:1 › movimento arma, termina e nunca é pré-requisito para ler (7.4s)
+  ✓  20 [mobile] › tests/e2e/site.spec.js:121:1 › reduced motion, foco visível e contraste acessível (10.4s)
+  ✓  19 [mobile] › tests/e2e/site.spec.js:97:1 › formulário inválido, e-mail inválido e mensagem válida sem abrir aplicativo (11.8s)
+  ✓  23 [mobile] › tests/e2e/site.spec.js:157:1 › HTML aparece mesmo antes do bundle React e hidratação preserva os nós (9.9s)
+  ✓  24 [mobile] › tests/e2e/site.spec.js:177:1 › movimento reduzido dinâmico cancela a abertura e mantém a leitura (7.1s)
+  ✓  25 [mobile] › tests/e2e/site.spec.js:191:1 › reduced motion durante hover e pressão cancela controles ativos (7.8s)
+  ✓  27 [mobile] › tests/e2e/site.spec.js:225:1 › abertura inspirada na referência preserva prioridades e fotografia em cada largura (6.6s)
+  ✓  26 [mobile] › tests/e2e/site.spec.js:205:1 › sem JS: contato seguro, navegação compacta e nenhum dado na URL (8.6s)
+  ✓  28 [mobile] › tests/e2e/site.spec.js:255:1 › catálogo adapta a leitura pela coluna sem recorte ou coluna implícita (5.4s)
+  ✓  30 [mobile] › tests/e2e/site.spec.js:301:1 › nome completo identifica a empresa visualmente e para tecnologia assistiva (4.5s)
+  ✓  29 [mobile] › tests/e2e/site.spec.js:274:1 › WhatsApp permanece disponível sem cobrir serviços, campos ou endereço no mobile (5.6s)
+
+  30 passed (57.9s)

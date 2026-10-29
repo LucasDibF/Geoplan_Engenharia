@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-28T23:35:13.335502+00:00",
+  "title": "Design System: Geoplan",
+  "extensions": {
+    "brandIdentity": {
+      "companyName": "Geoplan Engenharia e Consultoria Técnica",
+      "signatureDescriptor": "Engenharia e Consultoria Técnica",
+      "accessibleSignature": "Geoplan Engenharia e Consultoria Técnica",
+      "source": "Nome completo confirmado pelo usuário em 28/10/2026"
+    },
+    "colorMeta": {
+      "copper": {
+        "displayName": "copper",
+        "role": "primary",
+        "source": "css/input.css"
+      },
+      "copper-deep": {
+        "displayName": "copper-deep",
+        "role": "primary",
+        "source": "css/input.css"
+      },
+      "action": {
+        "displayName": "action",
+        "role": "primary",
+        "source": "css/input.css"
+      },
+      "charcoal": {
+        "displayName": "charcoal",
+        "role": "neutral",
+        "source": "css/input.css"
+      },
+      "charcoal-surface": {
+        "displayName": "charcoal-surface",
+        "role": "neutral",
+        "source": "css/input.css"
+      },
+      "deep": {
+        "displayName": "deep",
+        "role": "neutral",
+        "source": "css/input.css"
+      },
+      "putty": {
+        "displayName": "putty",
+        "role": "neutral",
+        "source": "css/input.css"
+      },
+      "bone": {
+        "displayName": "bone",
+        "role": "neutral",
+        "source": "css/input.css"
+      },
+      "chalk": {
+        "displayName": "chalk",
+        "role": "neutral",
+        "source": "css/input.css"
+      },
+      "sand": {
+        "displayName": "sand",
+        "role": "neutral",
+        "source": "css/input.css"
+      },
+      "rule": {
+        "displayName": "rule",
+        "role": "neutral",
+        "source": "css/input.css"
+      },
+      "field-border": {
+        "displayName": "field-border",
+        "role": "neutral",
+        "source": "css/input.css"
+      },
+      "muted": {
+        "displayName": "muted",
+        "role": "neutral",
+        "source": "css/input.css"
+      },
+      "rule-dark": {
+        "displayName": "rule-dark",
+        "role": "neutral",
+        "source": "css/input.css"
+      },
+      "contact-border": {
+        "displayName": "contact-border",
+        "role": "neutral",
+        "source": "css/input.css"
+      },
+      "field-dark": {
+        "displayName": "field-dark",
+        "role": "neutral",
+        "source": "css/input.css"
+      },
+      "placeholder-dark": {
+        "displayName": "placeholder-dark",
+        "role": "neutral",
+        "source": "css/input.css"
+      },
+      "error-dark": {
+        "displayName": "error-dark",
+        "role": "neutral",
+        "source": "css/input.css"
+      },
+      "error-text": {
+        "displayName": "error-text",
+        "role": "neutral",
+        "source": "css/input.css"
+      },
+      "error-border": {
+        "displayName": "error-border",
+        "role": "neutral",
+        "source": "css/input.css"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Assinatura compacta",
+        "purpose": "Geoplan decorativo, 2.5rem/1.2; js/ui/interactions.css"
+      },
+      "hero-title": {
+        "displayName": "H1 factual",
+        "purpose": "Coluna esquerda da abertura, clamp(2.5rem, 4.8vw, 4.75rem)"
+      },
+      "body": {
+        "displayName": "Archivo local",
+        "purpose": "Corpo e controles"
+      },
+      "service-title": {
+        "displayName": "Título de serviço",
+        "purpose": "Archivo herdada de .geoplan, peso 500 e line-height 1.35 de .geoplan h3; Catalogue.css define tamanho 1.65rem."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Hover e abertura da prancha; removidos sob reduced motion."
+      },
+      {
+        "name": "field-settle",
+        "value": "0.8s",
+        "purpose": "Acomodação existente da fotografia por escala, iniciada em 0.08s; js/ui/Hero.jsx. Não é animação nova da rodada de 28/10."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "small-phone",
+        "value": "359px"
+      },
+      {
+        "name": "single-column-differences",
+        "value": "479px"
+      },
+      {
+        "name": "form-columns",
+        "value": "640px"
+      },
+      {
+        "name": "mobile-layout",
+        "value": "767px"
+      },
+      {
+        "name": "mobile-menu",
+        "value": "1023px"
+      },
+      {
+        "name": "compact-header",
+        "value": "1100px"
+      }
+    ],
+    "containerQueries": [
+      {
+        "name": "service-reading-width",
+        "condition": "max-width: 42rem",
+        "container": ".services .service-catalog",
+        "purpose": "Descrição sob o título, com índice separado; js/ui/Catalogue.css."
+      },
+      {
+        "name": "process-reading-width",
+        "condition": "min-width: 34rem",
+        "container": ".process .process-track",
+        "purpose": "Título e descrição lado a lado, mantendo 1.8rem entre etapas; js/ui/Catalogue.css."
+      }
+    ],
+    "sourceOwnership": {
+      "css/input.css": "Tokens e fontes locais.",
+      "css/site.css": "Base sob .geoplan; sem regras antigas da Hero.",
+      "js/ui/interactions.css": "Abertura, H1 e assinatura por container.",
+      "js/ui/Chrome.css": "Header de 80px, menu pill e WhatsApp estático no rodapé.",
+      "js/ui/Catalogue.css": "Catálogo e processo por largura de container.",
+      "js/ui/Contact.css": "Ficha de contato, agrupamento e labels 500."
+    },
+    "documentationScope": {
+      "date": "2026-10-28",
+      "direction": "Evoluir o visual atual, preservando identidade, fontes, conteúdo e fluxos.",
+      "status": "Fontes locais documentadas; não declara gates aprovados ou publicação.",
+      "report": ".impeccable/review/editorial-evolution-2026-10-28/RESULTADO.md",
+      "retainedFindings": "8 italic-serif-display e 25 cramped-padding herdados, sob contrato editorial pinned; ver adjudicação de 27/10.",
+      "scaleReconciliation": "Dois novos design-system-font-size, tetos 3.5rem e 4.125rem, refletem evolução autorizada agora documentada; não alterar CSS para silenciá-los.",
+      "legacyScope": "Demais variantes e metadados históricos não foram normalizados nesta rodada; consultar a cascata atual."
+    },
+    "approvalHistory": [
+      {
+        "status": "historical-superseded-for-palette-composition-controls",
+        "date": "2026-10-28",
+        "reason": "Referência local explicitamente aprovada para integração visual",
+        "designMarkdown": "---\nname: Geoplan — Galeria de campo\ndescription: Engenharia editorial com escala de galeria, identidade Geoplan e contato direto.\ncolors:\n  copper: \"#b05b28\"\n  copper-deep: \"#7d3f1b\"\n  action: \"#964d22\"\n  charcoal: \"#33302e\"\n  charcoal-surface: \"#3d3835\"\n  deep: \"#2a2725\"\n  putty: \"#e0d6c8\"\n  bone: \"#f0ebe3\"\n  chalk: \"#faf8f5\"\n  sand: \"#c5b8a5\"\n  rule: \"#a89880\"\n  field-border: \"#91816e\"\n  muted: \"#5c5650\"\n  error-text: \"#842626\"\n  error-border: \"#9b2c2c\"\ntypography:\n  display:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"min(23cqw, 12rem)\"\n    fontWeight: 400\n    lineHeight: 1\n    letterSpacing: \"-0.025em\"\n  headline:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"clamp(2.25rem, 3.5vw, 3.5rem)\"\n    fontWeight: 400\n    lineHeight: 1.1\n    letterSpacing: \"-0.035em\"\n  body:\n    fontFamily: \"Archivo, sans-serif\"\n    fontSize: \"1rem\"\n    fontWeight: 400\n    lineHeight: 1.65\n  label:\n    fontFamily: \"Archivo, sans-serif\"\n    fontSize: \"0.85rem\"\n    fontWeight: 500\n    lineHeight: 1.5\n  data:\n    fontFamily: \"ui-monospace, SFMono-Regular, Consolas, monospace\"\n    fontSize: \"0.9rem\"\n    fontWeight: 400\n    lineHeight: 1.7\n  compact:\n    fontFamily: \"Archivo, sans-serif\"\n    fontSize: \"0.95rem\"\n    fontWeight: 400\n    lineHeight: 1.65\n  secondary:\n    fontFamily: \"Archivo, sans-serif\"\n    fontSize: \"0.9rem\"\n    fontWeight: 400\n    lineHeight: 1.65\n  metadata:\n    fontFamily: \"Archivo, sans-serif\"\n    fontSize: \"0.8rem\"\n    fontWeight: 400\n    lineHeight: 1.5\n  fine:\n    fontFamily: \"Archivo, sans-serif\"\n    fontSize: \"0.75rem\"\n    fontWeight: 400\n    lineHeight: 1.6\n  title:\n    fontFamily: \"Archivo, sans-serif\"\n    fontSize: \"1.25rem\"\n    fontWeight: 500\n    lineHeight: 1.35\n    letterSpacing: \"-0.02em\"\n  hero-title:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"clamp(2.5rem, 4.1vw, 4.125rem)\"\n    fontWeight: 400\n    lineHeight: 1.07\n    letterSpacing: \"-0.03em\"\n  hero-title-mobile:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"clamp(2rem, 6.4vw, 3rem)\"\n    fontWeight: 400\n    lineHeight: 1.12\n  hero-title-small:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"1.9rem\"\n    fontWeight: 400\n    lineHeight: 1.12\n  display-mobile:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"min(23cqw, 12rem)\"\n    fontWeight: 400\n    lineHeight: 1\n    letterSpacing: \"-0.025em\"\n  service-title:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"1.5rem\"\n    fontWeight: 400\n    lineHeight: 1.25\n  service-featured:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"1.8rem\"\n    fontWeight: 400\n    lineHeight: 1.25\n  service-mobile:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"1.35rem\"\n    fontWeight: 400\n    lineHeight: 1.25\n  service-featured-mobile:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"1.75rem\"\n    fontWeight: 400\n    lineHeight: 1.25\n  statistic:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"2.9rem\"\n    fontWeight: 400\n    lineHeight: 1.15\n  statistic-mobile:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"2.1rem\"\n    fontWeight: 400\n    lineHeight: 1.15\n  statistic-suffix:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"1.5rem\"\n    fontWeight: 400\n    lineHeight: 1.15\n  statistic-suffix-mobile:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"1.15rem\"\n    fontWeight: 400\n    lineHeight: 1.15\n  argument-title:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"1.5rem\"\n    fontWeight: 400\n    lineHeight: 1.15\n    letterSpacing: \"-0.02em\"\n  argument-title-wide:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"1.35rem\"\n    fontWeight: 400\n    lineHeight: 1.15\n  faq-question:\n    fontFamily: \"Archivo, sans-serif\"\n    fontSize: \"1.1rem\"\n    fontWeight: 500\n    lineHeight: 1.45\n  form-title:\n    fontFamily: \"Archivo, sans-serif\"\n    fontSize: \"1.65rem\"\n    fontWeight: 500\n    lineHeight: 1.35\n  contact-title:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"clamp(2.5rem, 4.5vw, 4.5rem)\"\n    fontWeight: 400\n    lineHeight: 1.08\n  segment:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"clamp(1.2rem, 1.9vw, 1.7rem)\"\n    fontWeight: 400\n    lineHeight: 1.2\n    letterSpacing: \"-0.02em\"\n  segment-mobile:\n    fontFamily: \"Bodoni Moda, Georgia, serif\"\n    fontSize: \"1.15rem\"\n    fontWeight: 400\n    lineHeight: 1.2\n  button:\n    fontFamily: \"Archivo, sans-serif\"\n    fontSize: \"0.95rem\"\n    fontWeight: 500\n    lineHeight: 1.35\n  data-mobile:\n    fontFamily: \"ui-monospace, SFMono-Regular, Consolas, monospace\"\n    fontSize: \"0.8rem\"\n    fontWeight: 400\n    lineHeight: 1.7\nrounded:\n  field: \"2px\"\n  pill: \"999px\"\nspacing:\n  group: \"1rem\"\n  separation: \"2rem\"\n  section: \"clamp(4.5rem, 7vw, 7rem)\"\ncomponents:\n  button-primary:\n    backgroundColor: \"{colors.action}\"\n    textColor: \"{colors.chalk}\"\n    rounded: \"{rounded.pill}\"\n    padding: \"1rem 1.35rem\"\n  button-dark:\n    backgroundColor: \"{colors.charcoal}\"\n    textColor: \"{colors.chalk}\"\n    rounded: \"{rounded.pill}\"\n    padding: \"1rem 1.35rem\"\n  field:\n    backgroundColor: \"{colors.chalk}\"\n    textColor: \"{colors.charcoal}\"\n    rounded: \"{rounded.field}\"\n    padding: \"0.85rem\"\n  menu-toggle:\n    textColor: \"{colors.bone}\"\n    rounded: \"{rounded.pill}\"\n    height: \"48px\"\n    width: \"48px\"\n  footer-whatsapp:\n    backgroundColor: \"{colors.action}\"\n    textColor: \"{colors.chalk}\"\n    rounded: \"{rounded.pill}\"\n    padding: \"0.9rem 1.25rem\"\n---\n\n# Design System: Geoplan\n\n## Overview\n\n**Creative North Star: \"Galeria de campo\"**\n\nReferência expressa do usuário: “Structured — Renaissance gallery on putty paper”, traduzida para engenharia e para a identidade existente, sem reproduzir textos, obras, marcas ou fontes proprietárias da referência. Tipografia serif de grande presença, grotesk de leitura e grandes planos areia/carvão organizam uma apresentação institucional, não uma interface de dashboard.\n\nAtualização documental de 28/10/2026: evolução do visual existente, autorizada pelo usuário, não substituição de identidade. Logo, Bodoni Moda/Archivo, paleta, conteúdo e fluxos permanecem. Este registro descreve as fontes locais; não é declaração de aprovação final, publicação ou conclusão dos gates da rodada.\n\n**Key Characteristics:**\n- Alternância opaca de planos claros, carvão e cobre, com cortes secos.\n- Fotos de campo em áreas próprias; sem texto longo sobre fotografia.\n- Hierarquia por escala, espaço e alinhamento; não por repetição de cartões.\n- Contato pelo WhatsApp visível e utilizável.\n\n## Colors\n\nA paleta é a identidade Geoplan herdada. Cobre permanece reconhecível na marca; sua derivação escura é usada em ações com texto claro por contraste. Carvão recebe marca, navegação, argumentos e rodapé; areia e seus claros sustentam leitura.\n\nHover de texto sobre areia usa carvão profundo, não cobre escuro (que nessa combinação atingia apenas 4.3:1). Sobre cobre, texto claro usa cal e osso, nunca areia. O cobre profundo (`copper-deep`, `#7d3f1b`, `--geo-650`) existe para dois casos: pressionar o destaque SPT sem derrubar o contraste do texto claro, e qualquer cobre que precise virar texto pequeno sobre areia. Vermelhos funcionais são reservados a validação, não ampliam a identidade comercial.\n\nO contorno funcional `field-border` (`--geo-field`) distingue campos sobre cal, com contraste de aproximadamente 3.56:1. Não reutilizar a linha editorial mais clara como borda de campo: separadores e controles têm necessidades diferentes.\n\n**The Identity Rule.** Não importar o preto, cinza putty ou cores exatas da referência se isso apagar os papéis cromáticos da Geoplan. Usar os tokens existentes, sem gradientes.\n\n## Typography\n\n**Display Font:** Bodoni Moda, hospedada localmente a partir de Fontsource, sob SIL Open Font License. Não é Davinci, Canela ou Tiempos.\n\nNome completo confirmado: **Geoplan Engenharia e Consultoria Técnica**. A assinatura da abertura une “Geoplan” em Bodoni ao descritor visível “Engenharia e Consultoria Técnica” em Archivo, 0.9rem/1.5, cor `--geo-700`. O wordmark continua decorativo; o descritor inclui “Geoplan” em `sr-only` para a leitura acessível do nome completo. Identificações institucionais, alt das duas logos e metadados usam o nome completo, sem redesenhar o arquivo da marca.\n\n**Body Font:** Archivo, hospedada localmente e licenciada. Não é Helvetica Now.\n\nA serif pertence aos títulos, serviços e grande composição tipográfica decorativa; Archivo mantém contexto, navegação, campos e descrições claros. Mono de sistema é limitada a códigos normativos e posição das etapas, onde o dado justifica o uso.\n\nO itálico da Bodoni é uma segunda voz, não um estilo de corpo: aparece em uma cláusula de cada título de seção e na abertura, sempre para deslocar o sentido da frase (“com segurança”, “além do preço”). Nunca em texto longo, rótulo, campo ou número de indicador — ali a leitura precisa ser neutra. O H1 factual tem escala própria (`hero-title`), ocupa uma faixa ampla e lidera a abertura; os H2 de seção usam `headline`. O H2 de contato conserva sua variante `contact-title`, sem normalizá-la nesta rodada.\n\nA composição decorativa “Geoplan” pode ultrapassar 6rem por decisão explícita do usuário. É `aria-hidden`, não substitui a logo oficial, não adiciona um segundo h1 e não transporta conteúdo exclusivo. Sua escala é vinculada ao próprio container de largura (`cqw`), com teto de 12rem, também no mobile: não usa 21vw ou 23vw. Títulos funcionais permanecem proporcionais e legíveis; descrições têm pelo menos 0.9rem, metadados pelo menos 0.75rem.\n\n### Rampa completa e usos intencionais\n\nReconciliação documental dos avisos históricos de `detector.json:262–824`, sem alterar CSS para silenciá-los. Os valores normativos estão no frontmatter; esta tabela identifica os papéis reais, inclusive as variações responsivas. Não transformar uma variante de contexto em tamanho obrigatório para toda a aplicação.\n\n| Papéis | Uso e origem |\n| --- | --- |\n| `title` | `.geoplan h3` em `css/site.css`; H3 utilitário, não é o título serif de serviço. |\n| `headline` | H2 de seção em `css/site.css`; escala e altura de linha atualizadas em 28/10. |\n| `hero-title`, `hero-title-mobile`, `hero-title-small` | H1 factual em `js/ui/interactions.css`; variantes até 767px e 359px, com limites e altura de linha próprios. |\n| `display`, `display-mobile` | Assinatura decorativa em `js/ui/interactions.css`; mesma fórmula relativa ao container nas duas variantes, não título funcional truncado. |\n| `service-title`, `service-featured` | `.service-entry h3` e `.service-featured h3` em `css/site.css`. |\n| `service-mobile`, `service-featured-mobile` | Papéis históricos do catálogo estreito; variantes efetivas em `css/site.css`, composição em `js/ui/Catalogue.css`. Não normalizados nesta rodada. |\n| `statistic`, `statistic-mobile`, `statistic-suffix`, `statistic-suffix-mobile` | `.numbers-list dd` e `.ledger-suffix` em `css/site.css`; leitura numérica separada do corpo. |\n| `argument-title`, `argument-title-wide` | `.difference-list dt` e suas variantes em `css/site.css`; Bodoni itálico não entra aqui. |\n| `faq-question` | `.faq-item summary` em `css/site.css`. |\n| `form-title`, `contact-title` | `.contact-form h3` e `.contact-heading h2` em `css/site.css`, com hierarquia distinta. |\n| `segment`, `segment-mobile` | `.segment-list li` em `css/site.css`; índice fluido, não controles/pills. |\n| `button`, `compact` | `.button`, `.service-entry p`, `.process-track p`, `.standard-list dd`, `.contact-details > p`, `#form-instructions` em `css/site.css`. Campos seguem seu componente em 1rem. |\n| `secondary` | `.text-link`, navegação e contato do rodapé, feedback do formulário e descrições no mobile. |\n| `label` | Localização na abertura, `.form-group label` com peso 500 em `js/ui/Contact.css` e `.contact-details dt`; índices técnicos mantêm o papel mono, não herdam este tamanho. |\n| `metadata`, `fine` | Legendas, `.button-caption`, ajuda de campo, arquivo, consentimento e copyright; base em `css/site.css`, abertura em `js/ui/interactions.css`. Não são tamanhos para corpo de texto longo. |\n| `data`, `data-mobile` | `.standard-list dt`, índice das etapas e `.service-index` em `css/site.css`; mono limitado a dados, nunca display. |\n\nO aviso de tamanho fora da rampa era uma diferença entre uma documentação resumida e esses usos reais. A reconciliação não muda o resultado histórico do detector, não reduz requisitos de contraste e não certifica automaticamente layouts futuros. A adjudicação completa, inclusive espaçamento e contraste, está em `.impeccable/review/DETECTOR-ADJUDICATION.md` (relatório histórico).\n\nA execução de 27/10/2026, depois da revisão de acessibilidade e de copy, zerou então os avisos de tamanho fora da rampa, de contraste e de travessões. As famílias heurísticas herdadas `italic-serif-display` (8 avisos) e `cramped-padding` (25 avisos) continuam contextualizadas em `.impeccable/review/DETECTOR-ADJUDICATION-2026-10-27.md`, sob a direção editorial pinned; não foram silenciadas com mudanças de CSS nesta atualização documental.\n\nEm 28/10, os dois novos avisos `design-system-font-size`, para os tetos 3.5rem e 4.125rem, correspondem à evolução autorizada dos H2 e H1, agora refletida no frontmatter. São divergências documentais intencionais da escala anterior, não motivo para reverter CSS. Isso não declara detector limpo nem gates aprovados: resultados e capturas da rodada pertencem a `.impeccable/review/editorial-evolution-2026-10-28/RESULTADO.md`. Os demais papéis e referências históricas desta rampa não foram normalizados nesta rodada; a cascata atual permanece a fonte de verdade para variantes herdadas.\n\n## Layout\n\nMargens desktop de 2.5rem, largura máxima de 100rem e margens mobile de 1.25rem (1rem até 359px). O container não espreme a composição numa coluna de blog. O respiro de seção usa `spacing.section`, sem reduzir o corpo de leitura para compactar a página.\n\nNa abertura desktop, o H1 atravessa as duas colunas; contexto/ações ficam na segunda linha à esquerda e assinatura na terceira linha à esquerda. A foto à direita atravessa essas duas linhas. No mobile, a ordem do documento é título, contexto/ações, foto, assinatura e capítulos: a assinatura não atrasa a imagem nem há reordenação de controles por CSS. O contexto desktop tem largura de 43ch; a foto tem legenda em faixa opaca própria.\n\nBreakpoints de viewport: 359px, 479px, 640px, 767px, 1023px e 1100px. O catálogo ocupa uma coluna de seção até 1023px; dentro dele, uma container query até 42rem empilha a descrição sob o título, mantendo o índice separado. A largura disponível da coluna, não só a janela, decide a composição. O processo conserva a sequência de oito etapas: a partir de 34rem no seu container, título e descrição ficam lado a lado; abaixo disso, empilham. O intervalo inferior entre etapas é 1.8rem, com a última sem intervalo, mantendo os textos existentes.\n\nDiferenciais usam uma coluna até 479px; campos de formulário usam duas colunas a partir de 640px. Header sticky com altura mínima efetiva de 80px; âncoras recebem compensação de rolagem e foco no título correspondente. O WhatsApp final ocupa espaço próprio no rodapé, antes do copyright, sem sobrepor conteúdo móvel.\n\n## Elevation & Depth\n\nSem sombras, vidro ou gradientes. Planos de cor e linhas de um pixel definem agrupamentos. A fotografia é conteúdo ilustrativo, não fundo global ou prova de uma operação da empresa. A textura de estratos entra só nas faixas de cobre, como matéria da marca, nunca como gráfico de solo ou dado de sondagem.\n\n### Movimento\n\nAtualização solicitada pelo usuário: **Framer Motion e Lucide React**, com correção da renderização e novas animações. A abertura agora é uma ilha React em `js/ui/Hero.jsx`, pré-renderizada no build e hidratada por `js/frontend-entry.jsx`. Não há tela vazia esperando o React. Sua sequência dura menos de um segundo: título já legível, composição tipográfica e acomodação discreta da fotografia. As setas respondem ao hover e o botão ao pressionar. Ícones funcionais são Lucide React, SVG local com traço 1.6, nunca emojis ou substituição da marca oficial.\n\n`js/motion.js` cuida do restante da leitura e das interações, usando Framer Motion, sem esconder listas ou blocos inteiros. A classe `motion-armed` é apenas indicação de inicialização: não tem regras que ocultam conteúdo. Indicadores conservam seus valores finais, sem contagem de zero. Menu e FAQ mantêm comportamento nativo/progressivo; movimento nunca decide disponibilidade de controles. Todos os controles/observers/listeners têm cancelamento; mudar para `prefers-reduced-motion: reduce` interrompe imediatamente o trabalho ativo e restaura os estados finais. Não adicionar loops, parallax ou animação letra a letra.\n\nOs estilos de abertura pertencem a `js/ui/interactions.css`; navegação/rodapé a `js/ui/Chrome.css`; catálogo/processo a `js/ui/Catalogue.css`; contato a `js/ui/Contact.css`. Todos são compilados em `js/frontend.css`, com seletores restritos aos componentes. `css/input.css` mantém tokens/fontes e `css/site.css` a base sob `.geoplan`; as regras antigas da Hero foram retiradas dessa base, sem criar uma segunda fonte visual para a abertura. Nenhuma animação ou dependência nova foi acrescentada na evolução de 28/10. O arquivo antigo `assets/motion.js` não faz mais parte do artefato público.\n\n## Shapes\n\nCTAs pill com altura mínima de 3.5rem; forma compacta sem reduzir área de toque. O botão do menu também é pill, com área mínima de 48×48px. Campos mantêm contornos sóbrios de dois pixels de raio; o seletor de arquivo acompanha esse raio. Linhas de um pixel e tipografia sustentam catálogo e FAQ; não criar caixas arredondadas para cada argumento.\n\n## Components\n\n### Buttons\n\nPrimário em cobre escuro e texto claro, com hover carvão. Na abertura, a indicação “Pelo WhatsApp” fica dentro do botão em todas as larguras, junto à ação que descreve. Ação secundária por e-mail em link sublinhado; envio do formulário em pill carvão. Movimento de hover de dois pixels, sem movimento sob reduced motion. Loading bloqueia reenvio e expõe `aria-busy`; foco por contorno visível e offset, não sombra.\n\n### Inputs / Fields\n\nFundo claro sólido, borda de um pixel em `field-border`, placeholder escuro com contraste. Texto de campos em 1rem, inclusive arquivo, para não provocar zoom automático no foco em iOS. Labels permanentes com peso 500, obrigatoriedade explícita e estado `aria-invalid`. Todas as instruções permanecem. A ficha tem borda areia e padding fluido até 2.5rem; o grupo de envio é separado por hairline. Erro explica recuperação; preparação de mailto não afirma que e-mail foi enviado. Dados não são apagados após abrir o aplicativo.\n\n### Navigation\n\nLinks desktop simples; item ativo usa `aria-current=\"location\"`. Navegação principal e links de navegação do rodapé têm área de toque com pelo menos 44px de altura. Menu mobile declara `aria-controls`/`aria-expanded`, fecha com Escape (restaurando foco), link, clique externo ou retorno ao desktop. Skip link é o primeiro destino de teclado.\n\n### Footer WhatsApp\n\nAção estática, pill cobre, ícone e texto visíveis também no mobile, com altura mínima de 56px. Está no fluxo antes do copyright: `footer-whatsapp` sobrescreve o posicionamento legado de `whatsapp-fab`, classe mantida por compatibilidade, não uma indicação de comportamento flutuante. Foco claro sobre carvão; hover respeita reduced motion. WhatsApp continua na abertura, no contato, no menu mobile e no header desktop; não depende deste último CTA.\n\n### Service catalog / Process\n\nServiços são linhas de título e descrição, com SPT destacado em cobre e índice mono (01–10), sem ícones inventados. O catálogo usa índice como localização; as oito etapas numeradas do processo comunicam ordem real. Títulos do catálogo não se deslocam no hover; a linha de destaque continua como resposta discreta. As container queries descritas em Layout preservam largura de leitura e todos os conteúdos são visíveis sem depender de animações.\n\n### FAQ\n\n`details/summary` nativos, sinais em SVG consistente, expansão pelo teclado e apenas um item aberto por vez. Sem modal.\n\n## Do's and Don'ts\n\n### Do:\n- **Do** preservar desenho e cores da logo oficial, distinguindo-a da tipografia decorativa.\n- **Do** usar fontes locais com licença e declarar a substituta real, sem alegar uso de fonte proprietária.\n- **Do** manter conteúdo comercial herdado e suas pendências técnicas em documentação de desenvolvimento.\n- **Do** distinguir foto ilustrativa de registro de uma equipe ou obra Geoplan.\n- **Do** manter foco visível, contraste sólido e ações WhatsApp acessíveis nos dois públicos.\n\n### Don't:\n- **Don't** inserir kickers decorativos, gráficos sem dados ou provas comerciais inventadas.\n- **Don't** reproduzir marca, imagens artísticas, texto ou motivos financeiros da referência.\n- **Don't** colocar corpo de texto sobre a imagem ou depender de CSS de CDN.\n- **Don't** tratar o formulário como upload ou envio SMTP.\n",
+        "sidecarSnapshot": {
+          "schemaVersion": 2,
+          "generatedAt": "2026-10-28T13:17:47Z",
+          "title": "Design System: Geoplan",
+          "components": [
+            {
+              "name": "WhatsApp primary",
+              "kind": "button",
+              "refersTo": "button-primary",
+              "description": "CTA da abertura com indicação de canal dentro do botão em todas as larguras.",
+              "html": "<a class=\"ds-primary\" href=\"#\">Falar com um especialista<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg><span>Pelo WhatsApp</span></a>",
+              "css": ".ds-primary{display:grid;grid-template-columns:1fr auto;align-items:center;gap:4px 20px;width:min(100%,26rem);min-height:56px;padding:16px 21.6px;border:1px solid transparent;border-radius:0;background:var(--geo-600,#a34c1c);color:var(--geo-50,#f4f2ee);font:500 15.2px/1.35 var(--font-editorial,Archivo,sans-serif);text-decoration:none;transition:background .18s}.ds-primary svg{grid-column:2;grid-row:1/3}.ds-primary span{grid-column:1;color:var(--geo-100,#eeebe5);font-size:.8rem;font-weight:400}.ds-primary:hover{background:var(--geo-900,#292824)}.ds-primary:focus-visible{outline:2px solid var(--geo-600,#a34c1c);outline-offset:5px}.ds-primary:active{transform:none}@media(max-width:767px){.ds-primary span{font-size:.75rem}}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+            },
+            {
+              "name": "Email submit",
+              "kind": "button",
+              "refersTo": "button-dark",
+              "description": "Preparar e-mail, sem alegar envio real.",
+              "html": "<button class=\"ds-dark\" type=\"button\">Preparar e-mail de orçamento</button>",
+              "css": ".ds-dark{min-height:56px;padding:16px 21.6px;border:0;border-radius:0;background:var(--geo-600,#a34c1c);color:var(--geo-50,#f4f2ee);font:500 15.2px var(--font-editorial,Archivo,sans-serif);cursor:pointer}.ds-dark:hover{background:var(--geo-650,#843b16)}.ds-dark:focus-visible{outline:2px solid var(--geo-600,#a34c1c);outline-offset:5px}.ds-dark:active{transform:translateY(1px)}.ds-dark:disabled{background:var(--geo-700,#64615b);cursor:wait}"
+            },
+            {
+              "name": "Contact field",
+              "kind": "input",
+              "refersTo": "field",
+              "description": "Campo escuro de 1rem, label permanente e contorno funcional.",
+              "html": "<label class=\"ds-label\" for=\"ds-name\">Nome *</label><input class=\"ds-field\" id=\"ds-name\" placeholder=\"Seu nome completo\" required>",
+              "css": ".ds-label{display:block;margin-bottom:8px;color:var(--geo-100,#eeebe5);font:500 13.6px/1.5 var(--font-editorial,Archivo,sans-serif)}.ds-field{display:block;width:100%;min-width:0;min-height:48px;padding:13.6px;border:1px solid var(--geo-field-dark,#91897c);border-radius:0;color:var(--geo-100,#eeebe5);background:var(--geo-800,#33312d);font:16px/1.4 var(--font-editorial,Archivo,sans-serif);caret-color:var(--geo-600,#a34c1c)}.ds-field::placeholder{color:var(--geo-placeholder-dark,#c1b9ac);opacity:1}.ds-field:focus{border-color:var(--geo-600,#a34c1c);box-shadow:inset 0 -2px 0 var(--geo-600,#a34c1c)}.ds-field:focus-visible{outline:2px solid var(--geo-600,#a34c1c);outline-offset:5px}.ds-field[aria-invalid=\"true\"]{border-color:#9b2c2c}"
+            },
+            {
+              "name": "Chapter navigation",
+              "kind": "nav",
+              "description": "Links simples, indicação ativa e foco sem efeito de vidro.",
+              "html": "<nav class=\"ds-nav\" aria-label=\"Exemplo de capítulos\"><a href=\"#\" aria-current=\"location\">Serviços</a><a href=\"#\">Processo</a><a href=\"#\">Contato</a></nav>",
+              "css": ".ds-nav{display:flex;gap:28px;padding:16px;background:var(--geo-900,#292824);font:16px var(--font-editorial,Archivo,sans-serif)}.ds-nav a{color:var(--geo-100,#eeebe5);text-decoration:none;text-underline-offset:7px}.ds-nav a:hover,.ds-nav a[aria-current]{color:var(--geo-300,#b9b2a6);text-decoration:underline}.ds-nav a:focus-visible{outline:2px solid var(--geo-300,#b9b2a6);outline-offset:5px}"
+            },
+            {
+              "name": "Service catalog entry",
+              "kind": "custom",
+              "description": "Item de grade escura; dez serviços preservados, três/duas/uma coluna na superfície.",
+              "html": "<article class=\"ds-service\"><span class=\"ds-index\">01</span><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><path d=\"M12 3v18M6 6h12M6 12h12M6 18h12\"/></svg><h3>Sondagem SPT</h3><p>Perfuração à percussão com registro de Nspt — base para dimensionamento de fundações com dados confiáveis.</p></article>",
+              "css": ".ds-service{display:flex;flex-direction:column;gap:1rem;padding:2rem;border-top:1px solid var(--geo-rule-dark,#514d46);background:var(--geo-900,#292824);color:var(--geo-500,#d87331)}.ds-index{color:var(--geo-300,#d8d4cc);font:.75rem/1.5 monospace}.ds-service h3{margin:1rem 0 0;font:400 1.65rem/1.25 var(--font-gallery,'Bodoni Moda',Georgia,serif)}.ds-service p{margin:0;color:var(--geo-300,#d8d4cc);font:.95rem/1.65 var(--font-editorial,Archivo,sans-serif)}.ds-service:hover{background:var(--geo-800,#33312d)}"
+            },
+            {
+              "name": "Native FAQ",
+              "kind": "custom",
+              "description": "Acordeão nativo acessível, com resposta em texto.",
+              "html": "<details class=\"ds-faq\"><summary>O laudo inclui ART?</summary><p>Sim. Todos os laudos são entregues em PDF já com a Anotação de Responsabilidade Técnica (ART) inclusa — sem necessidade de solicitação separada.</p></details>",
+              "css": ".ds-faq{border-top:1px solid var(--geo-300,#b9b2a6);color:var(--geo-900,#292824);font:16px/1.65 var(--font-editorial,Archivo,sans-serif)}.ds-faq summary{cursor:pointer;padding:24px 0;font-weight:500}.ds-faq summary:hover{color:var(--geo-950,#242422)}.ds-faq summary:focus-visible{outline:2px solid var(--geo-600,#a34c1c);outline-offset:5px}.ds-faq p{margin:0;padding-bottom:24px;color:var(--geo-700,#64615b)}"
+            },
+            {
+              "name": "Mobile menu toggle",
+              "kind": "button",
+              "refersTo": "menu-toggle",
+              "description": "Controle reto de 48px no header carvão; comportamento do menu existente.",
+              "html": "<button class=\"ds-menu\" type=\"button\" aria-label=\"Abrir menu\" aria-expanded=\"false\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><path d=\"M4 6h16M4 12h16M4 18h16\"/></svg></button>",
+              "css": ".ds-menu{display:inline-flex;align-items:center;justify-content:center;min-width:48px;min-height:48px;border:1px solid var(--geo-300,#b9b2a6);border-radius:0;background:var(--geo-900,#292824);color:var(--geo-100,#eeebe5);cursor:pointer}.ds-menu:focus-visible{outline:2px solid var(--geo-300,#b9b2a6);outline-offset:5px}"
+            },
+            {
+              "name": "Footer WhatsApp",
+              "kind": "button",
+              "refersTo": "footer-whatsapp",
+              "description": "Ação estática antes do copyright, com espaço próprio e texto visível no mobile. O seletor legado whatsapp-fab não implica posição flutuante.",
+              "html": "<a class=\"ds-footer-whatsapp\" href=\"#\" aria-label=\"Falar no WhatsApp\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><path d=\"M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719\"/></svg><span>WhatsApp</span></a>",
+              "css": ".ds-footer-whatsapp{position:static;display:inline-flex;align-items:center;justify-content:center;gap:.65rem;min-width:11rem;min-height:56px;padding:.9rem 1.25rem;margin-top:1.75rem;border:1px solid var(--geo-100,#eeebe5);border-radius:0;background:var(--geo-600,#a34c1c);color:var(--geo-50,#f4f2ee);font:.85rem/1.65 var(--font-editorial,Archivo,sans-serif);text-decoration:none;transition:background .18s,transform .18s var(--ease-out,cubic-bezier(.16,1,.3,1))}.ds-footer-whatsapp:hover{background:var(--geo-900,#292824);transform:translateY(-2px)}.ds-footer-whatsapp:focus-visible{outline:2px solid var(--geo-300,#b9b2a6);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-footer-whatsapp{transition:none}.ds-footer-whatsapp:hover{transform:none}}"
+            }
+          ],
+          "narrative": {
+            "northStar": "Galeria de campo",
+            "overview": "Referência expressa do usuário: “Structured — Renaissance gallery on putty paper”, traduzida para engenharia e para a identidade existente, sem reproduzir textos, obras, marcas ou fontes proprietárias da referência. Tipografia serif de grande presença, grotesk de leitura e grandes planos areia/carvão organizam uma apresentação institucional, não uma interface de dashboard.\n\nAtualização documental de 28/10/2026: evolução do visual existente, autorizada pelo usuário, não substituição de identidade. Logo, Bodoni Moda/Archivo, paleta, conteúdo e fluxos permanecem. Este registro descreve as fontes locais; não é declaração de aprovação final, publicação ou conclusão dos gates da rodada.",
+            "keyCharacteristics": [
+              "Alternância opaca de planos claros, carvão e cobre, com cortes secos.",
+              "Fotos de campo em áreas próprias; sem texto longo sobre fotografia.",
+              "Hierarquia por escala, espaço e alinhamento; não por repetição de cartões.",
+              "Contato pelo WhatsApp visível e utilizável."
+            ],
+            "rules": [
+              {
+                "name": "The Identity Rule",
+                "body": "Não importar o preto, cinza putty ou cores exatas da referência se isso apagar os papéis cromáticos da Geoplan. Usar os tokens existentes, sem gradientes.",
+                "section": "colors"
+              }
+            ],
+            "dos": [
+              "Do preservar desenho e cores da logo oficial, distinguindo-a da tipografia decorativa.",
+              "Do usar fontes locais com licença e declarar a substituta real, sem alegar uso de fonte proprietária.",
+              "Do manter conteúdo comercial herdado e suas pendências técnicas em documentação de desenvolvimento.",
+              "Do distinguir foto ilustrativa de registro de uma equipe ou obra Geoplan.",
+              "Do manter foco visível, contraste sólido e ações WhatsApp acessíveis nos dois públicos."
+            ],
+            "donts": [
+              "Don't inserir kickers decorativos, gráficos sem dados ou provas comerciais inventadas.",
+              "Don't reproduzir marca, imagens artísticas, texto ou motivos financeiros da referência.",
+              "Don't colocar corpo de texto sobre a imagem ou depender de CSS de CDN.",
+              "Don't tratar o formulário como upload ou envio SMTP."
+            ]
+          }
+        }
+      }
+    ],
+    "backgroundMotion": {
+      "target": "hero",
+      "durationsSeconds": [
+        26,
+        34
+      ],
+      "properties": [
+        "transform"
+      ],
+      "manualPause": true,
+      "pauseOffscreen": true,
+      "pauseWhenHidden": true,
+      "reducedMotion": "static",
+      "fallback": "static"
+    },
+    "equipmentGallery": {
+      "layout": "native horizontal scroll-snap",
+      "autoplay": false,
+      "controls": "previous/next, keyboard, touch",
+      "images": [
+        "assets/equipment-field.jpg",
+        "assets/hero-bg.jpg"
+      ],
+      "heroImage": false,
+      "imageFit": "contain",
+      "controlSize": "48px"
+    },
+    "processTimeline": {
+      "source": "user-provided screenshot 2026-10-28",
+      "stages": [
+        "Proposta",
+        "Assinatura",
+        "Mobilização",
+        "Execução",
+        "Entrega"
+      ],
+      "durations": [
+        "Aceite",
+        "1 dia",
+        "1 dia",
+        "1 dia",
+        "Até 24h após a conclusão da sondagem"
+      ],
+      "desktop": "horizontal five equal columns",
+      "mobile": "vertical below 640px",
+      "animatedProgress": false,
+      "palette": {
+        "paper": "#ffffff",
+        "rail": "#e1d6c6",
+        "marker": "#b45e28",
+        "accepted": "#1c9e70",
+        "border": "#e4dfd8",
+        "noteRule": "#e7d2c1"
+      }
+    }
+  },
+  "components": [
+    {
+      "name": "WhatsApp primary",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA da abertura com indicação de canal dentro do botão em todas as larguras.",
+      "html": "<a class=\"ds-primary\" href=\"#\">Falar com um especialista<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg><span>Pelo WhatsApp</span></a>",
+      "css": ".ds-primary{display:grid;grid-template-columns:1fr auto;align-items:center;gap:4px 20px;width:min(100%,26rem);min-height:56px;padding:16px 21.6px;border:1px solid transparent;border-radius:0;background:var(--geo-600,#a34c1c);color:var(--geo-50,#f4f2ee);font:500 15.2px/1.35 var(--font-editorial,Archivo,sans-serif);text-decoration:none;transition:background .18s}.ds-primary svg{grid-column:2;grid-row:1/3}.ds-primary span{grid-column:1;color:var(--geo-100,#eeebe5);font-size:.8rem;font-weight:400}.ds-primary:hover{background:var(--geo-900,#292824)}.ds-primary:focus-visible{outline:2px solid var(--geo-600,#a34c1c);outline-offset:5px}.ds-primary:active{transform:none}@media(max-width:767px){.ds-primary span{font-size:.75rem}}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Email submit",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Preparar e-mail, sem alegar envio real.",
+      "html": "<button class=\"ds-dark\" type=\"button\">Preparar e-mail de orçamento</button>",
+      "css": ".ds-dark{min-height:56px;padding:16px 21.6px;border:0;border-radius:0;background:var(--geo-600,#a34c1c);color:var(--geo-50,#f4f2ee);font:500 15.2px var(--font-editorial,Archivo,sans-serif);cursor:pointer}.ds-dark:hover{background:var(--geo-650,#843b16)}.ds-dark:focus-visible{outline:2px solid var(--geo-600,#a34c1c);outline-offset:5px}.ds-dark:active{transform:translateY(1px)}.ds-dark:disabled{background:var(--geo-700,#64615b);cursor:wait}"
+    },
+    {
+      "name": "Contact field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Campo escuro de 1rem, label permanente e contorno funcional.",
+      "html": "<label class=\"ds-label\" for=\"ds-name\">Nome *</label><input class=\"ds-field\" id=\"ds-name\" placeholder=\"Seu nome completo\" required>",
+      "css": ".ds-label{display:block;margin-bottom:8px;color:var(--geo-100,#eeebe5);font:500 13.6px/1.5 var(--font-editorial,Archivo,sans-serif)}.ds-field{display:block;width:100%;min-width:0;min-height:48px;padding:13.6px;border:1px solid var(--geo-field-dark,#91897c);border-radius:0;color:var(--geo-100,#eeebe5);background:var(--geo-800,#33312d);font:16px/1.4 var(--font-editorial,Archivo,sans-serif);caret-color:var(--geo-600,#a34c1c)}.ds-field::placeholder{color:var(--geo-placeholder-dark,#c1b9ac);opacity:1}.ds-field:focus{border-color:var(--geo-600,#a34c1c);box-shadow:none}.ds-field:focus-visible{outline:2px solid var(--geo-600,#a34c1c);outline-offset:5px}.ds-field[aria-invalid=\"true\"]{border-color:var(--geo-error-dark,#f49c8a)}"
+    },
+    {
+      "name": "Chapter navigation",
+      "kind": "nav",
+      "description": "Links simples, indicação ativa e foco sem efeito de vidro.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Exemplo de capítulos\"><a href=\"#\" aria-current=\"location\">Serviços</a><a href=\"#\">Processo</a><a href=\"#\">Contato</a></nav>",
+      "css": ".ds-nav{display:flex;gap:28px;padding:16px;background:var(--geo-900,#292824);font:16px var(--font-editorial,Archivo,sans-serif)}.ds-nav a{color:var(--geo-100,#eeebe5);text-decoration:none;text-underline-offset:7px}.ds-nav a:hover,.ds-nav a[aria-current]{color:var(--geo-300,#d8d4cc);text-decoration:underline}.ds-nav a:focus-visible{outline:2px solid var(--geo-300,#d8d4cc);outline-offset:5px}"
+    },
+    {
+      "name": "Service catalog entry",
+      "kind": "custom",
+      "description": "Item de grade escura; dez serviços preservados, três/duas/uma coluna na superfície.",
+      "html": "<article class=\"ds-service\"><span class=\"ds-index\">01</span><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><path d=\"M12 3v18M6 6h12M6 12h12M6 18h12\"/></svg><h3>Sondagem SPT</h3><p>Perfuração à percussão com registro de Nspt — base para dimensionamento de fundações com dados confiáveis.</p></article>",
+      "css": ".ds-service{display:flex;flex-direction:column;gap:1rem;padding:2rem;border-top:1px solid var(--geo-rule-dark,#514d46);background:var(--geo-900,#292824);color:var(--geo-500,#d87331)}.ds-index{color:var(--geo-300,#d8d4cc);font:.75rem/1.5 monospace}.ds-service h3{margin:1rem 0 0;font:500 1.65rem/1.35 var(--font-editorial,Archivo,sans-serif)}.ds-service p{margin:0;color:var(--geo-300,#d8d4cc);font:.95rem/1.65 var(--font-editorial,Archivo,sans-serif)}.ds-service:hover{background:var(--geo-800,#33312d)}"
+    },
+    {
+      "name": "Native FAQ",
+      "kind": "custom",
+      "description": "Acordeão nativo acessível, com resposta em texto.",
+      "html": "<details class=\"ds-faq\"><summary>O laudo inclui ART?</summary><p>Sim. Todos os laudos são entregues em PDF já com a Anotação de Responsabilidade Técnica (ART) inclusa — sem necessidade de solicitação separada.</p></details>",
+      "css": ".ds-faq{border-top:1px solid var(--geo-300,#d8d4cc);color:var(--geo-900,#292824);font:16px/1.65 var(--font-editorial,Archivo,sans-serif)}.ds-faq summary{cursor:pointer;padding:24px 0;font-weight:500}.ds-faq summary:hover{color:var(--geo-950,#242422)}.ds-faq summary:focus-visible{outline:2px solid var(--geo-600,#a34c1c);outline-offset:5px}.ds-faq p{margin:0;padding-bottom:24px;color:var(--geo-700,#64615b)}"
+    },
+    {
+      "name": "Mobile menu toggle",
+      "kind": "button",
+      "refersTo": "menu-toggle",
+      "description": "Controle reto de 48px no header carvão; comportamento do menu existente.",
+      "html": "<button class=\"ds-menu\" type=\"button\" aria-label=\"Abrir menu\" aria-expanded=\"false\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><path d=\"M4 6h16M4 12h16M4 18h16\"/></svg></button>",
+      "css": ".ds-menu{display:inline-flex;align-items:center;justify-content:center;min-width:48px;min-height:48px;border:1px solid var(--geo-300,#d8d4cc);border-radius:0;background:var(--geo-900,#292824);color:var(--geo-100,#eeebe5);cursor:pointer}.ds-menu:focus-visible{outline:2px solid var(--geo-300,#d8d4cc);outline-offset:5px}"
+    },
+    {
+      "name": "Footer WhatsApp",
+      "kind": "button",
+      "refersTo": "footer-whatsapp",
+      "description": "Ação estática antes do copyright, com espaço próprio e texto visível no mobile. O seletor legado whatsapp-fab não implica posição flutuante.",
+      "html": "<a class=\"ds-footer-whatsapp\" href=\"#\" aria-label=\"Falar no WhatsApp\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><path d=\"M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719\"/></svg><span>WhatsApp</span></a>",
+      "css": ".ds-footer-whatsapp{position:static;display:inline-flex;align-items:center;justify-content:center;gap:.65rem;min-width:11rem;min-height:56px;padding:.9rem 1.25rem;margin-top:1.75rem;border:1px solid var(--geo-100,#eeebe5);border-radius:0;background:var(--geo-600,#a34c1c);color:var(--geo-50,#f4f2ee);font:.85rem/1.65 var(--font-editorial,Archivo,sans-serif);text-decoration:none;transition:background .18s,transform .18s var(--ease-out,cubic-bezier(.16,1,.3,1))}.ds-footer-whatsapp:hover{background:var(--geo-900,#292824);transform:translateY(-2px)}.ds-footer-whatsapp:focus-visible{outline:2px solid var(--geo-300,#d8d4cc);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-footer-whatsapp{transition:none}.ds-footer-whatsapp:hover{transform:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Engenharia editorial",
+    "overview": "Integração aprovada da referência local landing-page-geoplan à apresentação institucional Geoplan. Planos carvão e cal, ênfase cobre e controles retos organizam a leitura; Bodoni Moda e Archivo locais sustentam títulos e conteúdo técnico. Logo, conteúdo e comportamentos existentes permanecem.\n\nO pedido expresso de 28/10/2026, “ADICIONE ESSE VISUAL A NOSSA LANDING PAGE, mantenha o codigo limpo e ordenado”, atualiza paleta, composição e controles. A direção Structured anterior permanece como histórico de aprovação, sem reger os valores atuais. A referência orienta o visual; suas fontes, aplicativo Next e conteúdo comercial divergente não foram importados.",
+    "keyCharacteristics": [
+      "Abertura e serviços em carvão; diferenciais claros e processo em areia.",
+      "Assinatura compacta e fotografia de campo explicitamente ilustrativa.",
+      "Dez serviços em grade com ícones Lucide locais.",
+      "Contato escuro com WhatsApp evidente e campos de contraste funcional."
+    ],
+    "rules": [
+      {
+        "name": "The Source Rule",
+        "body": "`css/input.css` é a fonte de verdade; adaptar o visual aprovado sem inventar uma segunda paleta nos componentes.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do preservar desenho e cores da logo oficial, distinguindo-a da tipografia decorativa.",
+      "Do usar fontes locais com licença e declarar as famílias realmente carregadas.",
+      "Do manter conteúdo comercial herdado e suas pendências técnicas em documentação de desenvolvimento.",
+      "Do distinguir foto ilustrativa de registro de uma equipe ou obra Geoplan.",
+      "Do manter foco visível, contraste sólido e ações WhatsApp acessíveis nos dois públicos."
+    ],
+    "donts": [
+      "Don't inventar cases, depoimentos, certificações, equipe ou gráficos sem dados.",
+      "Don't importar fontes, ativos, seis serviços ou promessas comerciais divergentes da referência.",
+      "Don't depender de CSS de CDN ou esconder conteúdo até a hidratação.",
+      "Don't tratar o formulário como upload ou envio SMTP."
+    ]
+  }
+}

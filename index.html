@@ -1,540 +1,94 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Geoplan — Sondagens SPT, investigação geotécnica e consultoria técnica para obras e fundações." />
-  <title>Geoplan | Sondagem SPT e Consultoria Geotécnica</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            geo: {
-              50: '#faf8f5',
-              100: '#f0ebe3',
-              200: '#e0d6c8',
-              300: '#c5b8a5',
-              400: '#a89880',
-              500: '#b05b28',
-              600: '#964d22',
-              700: '#5c5650',
-              800: '#3d3835',
-              900: '#33302e',
-              950: '#2a2725',
-            },
-          },
-          fontFamily: {
-            sans: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
-            display: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
-            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
-          },
-        },
-      },
-    };
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Geoplan Engenharia e Consultoria Técnica — Empresa de sondagem SPT e investigação geotécnica em Palmas/TO. Ensaios de solo, laudos técnicos e consultoria para obras residenciais, industriais e infraestrutura.">
+  <meta name="keywords" content="sondagem SPT, sondagem de solo, investigação geotécnica, ensaio de solo, empresa de sondagem, sondagem geotécnica, laudo de sondagem, Palmas TO">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Geoplan Engenharia e Consultoria Técnica | Sondagem SPT — Palmas/TO">
+  <meta property="og:description" content="Sondagens e investigações geotécnicas com precisão e agilidade.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <title>Geoplan Engenharia e Consultoria Técnica | Sondagem SPT — Palmas/TO</title>
+  <link rel="canonical" href="https://geoplan-engenharia.vercel.app/">
+  <link rel="icon" href="assets/favicon.png" type="image/png" sizes="64x64">
+  <link rel="preload" href="assets/fonts/dm-sans-400-normal.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-400-normal.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="js/frontend.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ProfessionalService","name":"Geoplan Engenharia e Consultoria Técnica","description":"Empresa de sondagem SPT, investigação geotécnica e ensaios de solo em Palmas e Tocantins.","telephone":"+55-63-99242-6210","email":"geoplanengenharia.to@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Quadra ARNO 42, Alameda 8, QI 14, Lote 25","addressLocality":"Palmas","addressRegion":"TO","postalCode":"77002-018","addressCountry":"BR"},"areaServed":["Palmas","Tocantins","Brasil"],"serviceType":["Sondagem SPT","Investigação geotécnica","Ensaios de solo"]}
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/frontend.js"></script>
 </head>
-<body class="font-sans text-geo-900 bg-geo-50 antialiased">
-  <canvas id="dot-wave" class="dot-wave-bg" aria-hidden="true"></canvas>
-
-  <!-- Header -->
-  <header id="topo" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" data-header>
-    <nav class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-      <div class="flex h-16 sm:h-20 items-center justify-between rounded-b-2xl mt-2 px-4 sm:px-6 bg-geo-950/90 backdrop-blur-md border border-geo-800/60 shadow-sm" data-nav-inner>
-        <a href="#topo" class="flex items-center group">
-          <img src="assets/logo.png" alt="Geoplan Engenharia e Consultoria Técnica" class="h-10 sm:h-12 w-auto object-contain" width="200" height="48" />
-        </a>
-
-        <ul class="hidden md:flex items-center gap-1">
-          <li><a href="#inicio" class="nav-link">Início</a></li>
-          <li><a href="#sobre" class="nav-link">Sobre</a></li>
-          <li><a href="#servicos" class="nav-link">Serviços</a></li>
-          <li><a href="#prazos" class="nav-link">Prazos</a></li>
-          <li><a href="#contato" class="nav-link">Contato</a></li>
-        </ul>
-
-        <a href="#contato" class="hidden sm:inline-flex items-center gap-2 rounded-lg bg-geo-500 px-4 py-2 text-sm font-semibold text-white hover:bg-geo-600 transition-colors shadow-sm shadow-geo-500/30">
-          Solicitar orçamento
-        </a>
-
-        <button type="button" class="md:hidden p-2 rounded-lg text-geo-300 hover:bg-geo-800 transition-colors" aria-label="Abrir menu" data-menu-toggle>
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-
-      <!-- Mobile menu -->
-      <div class="md:hidden hidden mt-2 rounded-2xl bg-geo-950 border border-geo-800 shadow-lg overflow-hidden" data-mobile-menu>
-        <ul class="flex flex-col py-2">
-          <li><a href="#inicio" class="mobile-nav-link">Início</a></li>
-          <li><a href="#sobre" class="mobile-nav-link">Sobre</a></li>
-          <li><a href="#servicos" class="mobile-nav-link">Serviços</a></li>
-          <li><a href="#prazos" class="mobile-nav-link">Prazos</a></li>
-          <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Hero -->
-    <section id="inicio" data-dot-zone="dark" class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-geo-950/35 text-white">
-      <div class="absolute inset-0 bg-gradient-to-br from-geo-950/55 via-geo-900/50 to-geo-800/45 pointer-events-none"></div>
-      <div class="absolute top-1/4 -right-32 w-96 h-96 rounded-full bg-geo-500/15 blur-3xl"></div>
-      <div class="absolute bottom-1/4 -left-24 w-72 h-72 rounded-full bg-geo-500/10 blur-3xl"></div>
-
-      <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 w-full">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div class="reveal">
-            <p class="inline-flex items-center gap-2 rounded-full bg-black/25 border border-geo-500/40 px-4 py-1.5 text-sm font-medium text-geo-100 mb-6 backdrop-blur-sm">
-              <span class="h-2 w-2 rounded-full bg-geo-500 animate-pulse"></span>
-              Engenharia e Consultoria Técnica
-            </p>
-            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight">
-              Sondagem <span class="text-geo-400">SPT</span> com precisão e confiança
-            </h1>
-            <p class="mt-6 text-lg text-white/90 max-w-xl leading-relaxed">
-              Investigamos o subsolo da sua obra com equipamentos calibrados, equipe qualificada e laudos técnicos claros — para fundações seguras e projetos sem surpresas.
-            </p>
-            <div class="mt-8 flex flex-wrap gap-4">
-              <a href="#contato" class="inline-flex items-center gap-2 rounded-xl bg-geo-500 px-6 py-3.5 text-base font-semibold text-white hover:bg-geo-600 transition-all shadow-lg shadow-geo-500/30 hover:shadow-xl hover:-translate-y-0.5">
-                Fale conosco
-                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-              </a>
-              <a href="#servicos" class="inline-flex items-center gap-2 rounded-xl border-2 border-white/35 px-6 py-3.5 text-base font-semibold text-white hover:border-geo-400 hover:bg-white/10 transition-all">
-                Nossos serviços
-              </a>
-            </div>
-            <dl class="mt-12 grid grid-cols-3 gap-6 max-w-md">
-              <div>
-                <dt class="text-2xl sm:text-3xl font-display font-bold text-geo-400">+500</dt>
-                <dd class="text-sm text-white/75 mt-1">Sondagens realizadas</dd>
-              </div>
-              <div>
-                <dt class="text-2xl sm:text-3xl font-display font-bold text-geo-400">100%</dt>
-                <dd class="text-sm text-white/75 mt-1">Conforme NBR</dd>
-              </div>
-              <div>
-                <dt class="text-2xl sm:text-3xl font-display font-bold text-geo-400">24h</dt>
-                <dd class="text-sm text-white/75 mt-1">Resposta média</dd>
-              </div>
-            </dl>
-          </div>
-
-          <div class="relative reveal reveal-delay-2">
-            <div class="chart-card-frame aspect-[4/5] w-full max-w-2xl mx-auto lg:max-w-none xl:max-w-3xl rounded-2xl overflow-hidden">
-              <div class="chart-card-inner h-full w-full flex flex-col justify-center p-4 sm:p-6 relative min-h-[560px] sm:min-h-[640px]">
-
-                <div class="chart-carousel" data-chart-carousel aria-live="polite" aria-label="Gráficos de investigação geotécnica">
-                  <!-- Slide 1: Perfil horizontal SPT -->
-                  <figure class="chart-slide chart-slide--graph is-active" data-chart-slide>
-                    <div class="spt-profile-chart" role="img" aria-label="Perfil SPT horizontal: barras de resistência em seis profundidades">
-                      <div class="spt-row"><div class="spt-bar-track"><div class="spt-bar spt-bar--soft" style="--nspt: 4; width: 10%"></div></div></div>
-                      <div class="spt-row"><div class="spt-bar-track"><div class="spt-bar spt-bar--soft" style="--nspt: 7; width: 17.5%"></div></div></div>
-                      <div class="spt-row"><div class="spt-bar-track"><div class="spt-bar" style="--nspt: 12; width: 30%"></div></div></div>
-                      <div class="spt-row"><div class="spt-bar-track"><div class="spt-bar spt-bar--dense" style="--nspt: 28; width: 70%"></div></div></div>
-                      <div class="spt-row"><div class="spt-bar-track"><div class="spt-bar spt-bar--dense" style="--nspt: 35; width: 87.5%"></div></div></div>
-                      <div class="spt-row"><div class="spt-bar-track"><div class="spt-bar" style="--nspt: 22; width: 55%"></div></div></div>
-                    </div>
-                  </figure>
-
-                  <!-- Slide 2: Colunas verticais -->
-                  <figure class="chart-slide chart-slide--graph" data-chart-slide>
-                    <div class="chart-vertical" role="img" aria-label="Colunas verticais de resistência SPT em seis profundidades">
-                      <div class="chart-vertical-bars">
-                        <div class="chart-vcol"><div class="chart-vbar chart-vbar--anim" style="--h: 18%; --d: 0"></div></div>
-                        <div class="chart-vcol"><div class="chart-vbar chart-vbar--anim" style="--h: 32%; --d: 1"></div></div>
-                        <div class="chart-vcol"><div class="chart-vbar chart-vbar--anim" style="--h: 48%; --d: 2"></div></div>
-                        <div class="chart-vcol"><div class="chart-vbar chart-vbar--anim chart-vbar--dense" style="--h: 78%; --d: 3"></div></div>
-                        <div class="chart-vcol"><div class="chart-vbar chart-vbar--anim chart-vbar--dense" style="--h: 95%; --d: 4"></div></div>
-                        <div class="chart-vcol"><div class="chart-vbar chart-vbar--anim" style="--h: 58%; --d: 5"></div></div>
-                      </div>
-                    </div>
-                  </figure>
-
-                  <!-- Slide 3: Perfil geotécnico (linha) -->
-                  <figure class="chart-slide chart-slide--graph" data-chart-slide>
-                    <div class="chart-line-wrap" role="img" aria-label="Perfil geotécnico SPT: linha de Nspt entre 1 e 6 metros de profundidade">
-                      <svg class="chart-line-svg" viewBox="0 0 150 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-                        <line x1="12" y1="12" x2="12" y2="132" class="chart-svg-gridline"/>
-                        <line x1="12" y1="132" x2="138" y2="132" class="chart-svg-gridline"/>
-                        <line x1="12" y1="36" x2="138" y2="36" class="chart-svg-gridline chart-svg-gridline--faint"/>
-                        <line x1="12" y1="60" x2="138" y2="60" class="chart-svg-gridline chart-svg-gridline--faint"/>
-                        <line x1="12" y1="84" x2="138" y2="84" class="chart-svg-gridline chart-svg-gridline--faint"/>
-                        <line x1="12" y1="108" x2="138" y2="108" class="chart-svg-gridline chart-svg-gridline--faint"/>
-                        <line x1="44" y1="12" x2="44" y2="132" class="chart-svg-gridline chart-svg-gridline--faint"/>
-                        <line x1="76" y1="12" x2="76" y2="132" class="chart-svg-gridline chart-svg-gridline--faint"/>
-                        <line x1="107" y1="12" x2="107" y2="132" class="chart-svg-gridline chart-svg-gridline--faint"/>
-                        <polyline class="chart-line-path" points="25,12 34,36 50,60 100,84 122,108 81,132" fill="none" stroke="#b05b28" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="25" cy="12" r="6" class="chart-svg-point chart-svg-point--soft"/>
-                        <circle cx="34" cy="36" r="6" class="chart-svg-point chart-svg-point--soft"/>
-                        <circle cx="50" cy="60" r="6" class="chart-svg-point chart-svg-point--soft"/>
-                        <circle cx="100" cy="84" r="6" class="chart-svg-point"/>
-                        <circle cx="122" cy="108" r="6" class="chart-svg-point"/>
-                        <circle cx="81" cy="132" r="6" class="chart-svg-point"/>
-                      </svg>
-                    </div>
-                  </figure>
-
-                  <div class="chart-carousel-dots" role="tablist" aria-label="Selecionar gráfico">
-                    <button type="button" class="chart-dot is-active" data-chart-dot="0" aria-label="Perfil SPT horizontal" aria-selected="true"></button>
-                    <button type="button" class="chart-dot" data-chart-dot="1" aria-label="Colunas verticais" aria-selected="false"></button>
-                    <button type="button" class="chart-dot" data-chart-dot="2" aria-label="Perfil geotécnico SPT" aria-selected="false"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <a href="#sobre" class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/55 hover:text-geo-400 transition-colors scroll-hint" aria-label="Rolar para baixo">
-        <span class="text-xs font-medium">Saiba mais</span>
-        <svg class="h-5 w-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
-      </a>
-    </section>
-
-    <!-- Sobre -->
-    <section id="sobre" data-dot-zone="light" class="py-20 sm:py-28 bg-geo-50/82">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto reveal">
-          <span class="section-label">Sobre nós</span>
-          <h2 class="section-title mt-3">Conhecimento do solo que sustenta seu projeto</h2>
-          <p class="section-text mt-4">
-            A Geoplan é especializada em sondagens à percussão (SPT) e serviços de investigação geotécnica, apoiando engenheiros, construtoras e proprietários na tomada de decisões seguras para fundações e obras de infraestrutura.
-          </p>
-        </div>
-
-        <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          <article class="card reveal">
-            <div class="card-icon bg-geo-100 text-geo-700">
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            </div>
-            <h3 class="card-title">Equipamentos calibrados</h3>
-            <p class="card-text">Tripé, martelo e amostradores em conformidade com a NBR 7188, garantindo resultados confiáveis para o projeto estrutural.</p>
-          </article>
-          <article class="card reveal reveal-delay-1">
-            <div class="card-icon bg-geo-500/15 text-geo-500">
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
-            </div>
-            <h3 class="card-title">Atuação em campo</h3>
-            <p class="card-text">Deslocamento ágil para obras urbanas e rurais, com registro fotográfico e coordenadas de cada ponto de sondagem.</p>
-          </article>
-          <article class="card reveal reveal-delay-2 sm:col-span-2 lg:col-span-1">
-            <div class="card-icon bg-geo-100 text-geo-700">
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
-            </div>
-            <h3 class="card-title">Laudos e perfis</h3>
-            <p class="card-text">Entrega de perfis de sondagem, tabelas de Nspt e recomendações técnicas para dimensionamento de fundações rasas ou profundas.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Serviços -->
-    <section id="servicos" data-dot-zone="light" class="py-20 sm:py-28 bg-geo-100/78">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 reveal">
-          <div class="max-w-xl">
-            <span class="section-label">Serviços</span>
-            <h2 class="section-title mt-3">Soluções completas em geotecnia</h2>
-          </div>
-          <p class="text-geo-800 max-w-md lg:text-right">
-            Do levantamento em campo ao relatório final — tudo que sua obra precisa para avançar com segurança.
-          </p>
-        </div>
-
-        <div class="mt-14 grid md:grid-cols-2 gap-6">
-          <article class="service-card reveal">
-            <span class="service-number">01</span>
-            <h3 class="text-xl font-display font-bold text-geo-900 mt-4">Sondagem SPT</h3>
-            <p class="mt-3 text-geo-800 leading-relaxed">Perfuração à percussão com registro de golpes (Nspt) a cada 30 cm, identificação de camadas e coleta de amostras alteradas para caracterização do subsolo.</p>
-            <ul class="mt-4 space-y-2 text-sm text-geo-700">
-              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-geo-500"></span>Profundidade conforme projeto</li>
-              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-geo-500"></span>Perfil geotécnico detalhado</li>
-            </ul>
-          </article>
-          <article class="service-card reveal reveal-delay-1">
-            <span class="service-number">02</span>
-            <h3 class="text-xl font-display font-bold text-geo-900 mt-4">Investigação geotécnica</h3>
-            <p class="mt-3 text-geo-800 leading-relaxed">Programa de sondagens dimensionado para residências, edifícios, galpões industriais e obras de infraestrutura, alinhado às necessidades do projetista.</p>
-            <ul class="mt-4 space-y-2 text-sm text-geo-700">
-              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-geo-500"></span>Malha de furos estratégica</li>
-              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-geo-500"></span>Apoio em licenciamento</li>
-            </ul>
-          </article>
-          <article class="service-card reveal reveal-delay-1">
-            <span class="service-number">03</span>
-            <h3 class="text-xl font-display font-bold text-geo-900 mt-4">Relatórios técnicos</h3>
-            <p class="mt-3 text-geo-800 leading-relaxed">Documentação com perfis de sondagem, gráficos de Nspt, descrição de solo e parâmetros de referência para fundações e contenções.</p>
-            <ul class="mt-4 space-y-2 text-sm text-geo-700">
-              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-geo-500"></span>Formato digital e impresso</li>
-              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-geo-500"></span>ART quando solicitada</li>
-            </ul>
-          </article>
-          <article class="service-card reveal reveal-delay-2">
-            <span class="service-number">04</span>
-            <h3 class="text-xl font-display font-bold text-geo-900 mt-4">Consultoria técnica</h3>
-            <p class="mt-3 text-geo-800 leading-relaxed">Orientação sobre capacidade de carga, tipo de fundação indicada, recalques e interpretação de resultados para engenheiros e construtoras.</p>
-            <ul class="mt-4 space-y-2 text-sm text-geo-700">
-              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-geo-500"></span>Reuniões de alinhamento</li>
-              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-geo-500"></span>Suporte pós-entrega</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Prazos e Etapas -->
-    <section id="prazos" data-dot-zone="light" class="py-20 sm:py-28 bg-white/85">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <header class="text-center reveal">
-          <h2 class="timeline-title">Prazos e Etapas do Projeto</h2>
-          <div class="timeline-title-line" aria-hidden="true"></div>
-        </header>
-
-        <!-- Timeline horizontal (desktop / tablet) -->
-        <div class="timeline-desktop reveal mt-14 hidden md:block" role="list" aria-label="Etapas e prazos do projeto">
-          <div class="timeline-durations">
-            <div class="timeline-duration timeline-duration--check" aria-hidden="true">
-              <svg class="timeline-check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle cx="12" cy="12" r="10" fill="#22a06b"/>
-                <path d="M8 12.5l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="timeline-duration"><span>1 dia</span></div>
-            <div class="timeline-duration"><span>1 dia</span></div>
-            <div class="timeline-duration"><span>1 dia</span></div>
-            <div class="timeline-duration timeline-duration--wide">
-              <span><strong>Até 24h</strong> após a conclusão da sondagem</span>
-            </div>
-          </div>
-
-          <div class="timeline-track-wrap">
-            <div class="timeline-bar" aria-hidden="true"></div>
-            <ol class="timeline-points">
-              <li class="timeline-point timeline-point--start" role="listitem">
-                <span class="timeline-dot timeline-dot--hidden" aria-hidden="true"></span>
-              </li>
-              <li class="timeline-point" role="listitem"><span class="timeline-dot" aria-hidden="true"></span></li>
-              <li class="timeline-point" role="listitem"><span class="timeline-dot" aria-hidden="true"></span></li>
-              <li class="timeline-point" role="listitem"><span class="timeline-dot" aria-hidden="true"></span></li>
-              <li class="timeline-point" role="listitem"><span class="timeline-dot" aria-hidden="true"></span></li>
-            </ol>
-          </div>
-
-          <ol class="timeline-labels">
-            <li class="timeline-label" role="listitem">
-              <strong>Proposta</strong>
-              <span>Aceite</span>
-            </li>
-            <li class="timeline-label" role="listitem">
-              <strong>Assinatura</strong>
-              <span>do Contrato</span>
-            </li>
-            <li class="timeline-label" role="listitem">
-              <strong>Mobilização</strong>
-              <span>da Equipe</span>
-            </li>
-            <li class="timeline-label" role="listitem">
-              <strong>Execução</strong>
-              <span>dos Furos SPT</span>
-            </li>
-            <li class="timeline-label" role="listitem">
-              <strong>Entrega</strong>
-              <span>Relatório + ART</span>
-            </li>
-          </ol>
-        </div>
-
-        <!-- Timeline vertical (mobile) -->
-        <ol class="timeline-mobile reveal mt-10 md:hidden space-y-0" role="list" aria-label="Etapas e prazos do projeto">
-          <li class="timeline-mobile-step">
-            <div class="timeline-mobile-marker">
-              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle cx="12" cy="12" r="10" fill="#22a06b"/>
-                <path d="M8 12.5l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="timeline-mobile-content">
-              <p class="timeline-mobile-prazo text-geo-700">Aceite da proposta</p>
-              <p class="timeline-mobile-etapa"><strong>Proposta</strong> · Aceite</p>
-            </div>
-          </li>
-          <li class="timeline-mobile-step">
-            <div class="timeline-mobile-marker"><span class="timeline-dot"></span></div>
-            <div class="timeline-mobile-content">
-              <p class="timeline-mobile-prazo"><strong>1 dia</strong></p>
-              <p class="timeline-mobile-etapa"><strong>Assinatura</strong> do Contrato</p>
-            </div>
-          </li>
-          <li class="timeline-mobile-step">
-            <div class="timeline-mobile-marker"><span class="timeline-dot"></span></div>
-            <div class="timeline-mobile-content">
-              <p class="timeline-mobile-prazo"><strong>1 dia</strong></p>
-              <p class="timeline-mobile-etapa"><strong>Mobilização</strong> da Equipe</p>
-            </div>
-          </li>
-          <li class="timeline-mobile-step">
-            <div class="timeline-mobile-marker"><span class="timeline-dot"></span></div>
-            <div class="timeline-mobile-content">
-              <p class="timeline-mobile-prazo"><strong>1 dia</strong></p>
-              <p class="timeline-mobile-etapa"><strong>Execução</strong> dos Furos SPT</p>
-            </div>
-          </li>
-          <li class="timeline-mobile-step timeline-mobile-step--last">
-            <div class="timeline-mobile-marker"><span class="timeline-dot"></span></div>
-            <div class="timeline-mobile-content">
-              <p class="timeline-mobile-prazo"><strong>Até 24h</strong> após a conclusão da sondagem</p>
-              <p class="timeline-mobile-etapa"><strong>Entrega</strong> Relatório + ART</p>
-            </div>
-          </li>
-        </ol>
-
-        <p class="timeline-footer reveal">
-          Prazos de mobilização e execução podem variar de acordo com a distância e quantidade de furos.
-        </p>
-      </div>
-    </section>
-
-    <!-- Contato -->
-    <section id="contato" data-dot-zone="light" class="py-20 sm:py-28 bg-geo-50/82">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-5 gap-12 lg:gap-16">
-          <div class="lg:col-span-2 reveal">
-            <span class="section-label">Contato</span>
-            <h2 class="section-title mt-3">Solicite seu orçamento</h2>
-            <p class="section-text mt-4">
-              Preencha o formulário ou use um dos canais abaixo. Respondemos em até 24 horas úteis.
-            </p>
-
-            <ul class="mt-10 space-y-5">
-              <li>
-                <a href="tel:+5563992426210" class="contact-channel group">
-                  <span class="contact-icon">
-                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
-                  </span>
-                  <span>
-                    <span class="block text-xs font-medium text-geo-500 uppercase tracking-wider">Telefone</span>
-                    <span class="block font-semibold text-geo-900 group-hover:text-geo-500 transition-colors">(63) 99242-6210</span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="mailto:geoplanengenharia.to@gmail.com" class="contact-channel group">
-                  <span class="contact-icon">
-                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 00-1.07-1.916l-7.5-4.615a2.25 2.25 0 00-2.36 0L3.32 8.91a2.25 2.25 0 00-1.07 1.916V6.75" /></svg>
-                  </span>
-                  <span>
-                    <span class="block text-xs font-medium text-geo-500 uppercase tracking-wider">E-mail</span>
-                    <span class="block font-semibold text-geo-900 group-hover:text-geo-500 transition-colors break-all">geoplanengenharia.to@gmail.com</span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://wa.me/5563992426210?text=Olá! Gostaria de solicitar um orçamento de sondagem SPT." target="_blank" rel="noopener noreferrer" class="contact-channel group">
-                  <span class="contact-icon bg-green-50 text-green-700 group-hover:bg-green-100">
-                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.881 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                  </span>
-                  <span>
-                    <span class="block text-xs font-medium text-geo-500 uppercase tracking-wider">WhatsApp</span>
-                    <span class="block font-semibold text-geo-900 group-hover:text-green-700 transition-colors">Enviar mensagem</span>
-                  </span>
-                </a>
-              </li>
-              <li class="flex items-start gap-4">
-                <span class="contact-icon shrink-0">
-                  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
-                </span>
-                <span>
-                  <span class="block text-xs font-medium text-geo-500 uppercase tracking-wider">Endereço</span>
-                  <span class="block text-geo-800 leading-relaxed">Quadra ARNO 42, Alameda 8, nº s/n, QI 14, Lote 25</span>
-                  <span class="block text-sm text-geo-600 mt-1">Plano Diretor Norte — Palmas, TO · CEP 77002-018</span>
-                  <span class="block text-sm text-geo-600 mt-2">Segunda a sexta, 8h às 18h</span>
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="lg:col-span-3 reveal reveal-delay-1">
-            <form id="form-contato" class="contact-form" novalidate>
-              <div class="grid sm:grid-cols-2 gap-5">
-                <div class="form-group">
-                  <label for="nome" class="form-label">Nome completo</label>
-                  <input type="text" id="nome" name="nome" required autocomplete="name" class="form-input" placeholder="Seu nome" />
-                </div>
-                <div class="form-group">
-                  <label for="empresa" class="form-label">Empresa / Obra</label>
-                  <input type="text" id="empresa" name="empresa" class="form-input" placeholder="Opcional" />
-                </div>
-              </div>
-              <div class="grid sm:grid-cols-2 gap-5 mt-5">
-                <div class="form-group">
-                  <label for="email" class="form-label">E-mail</label>
-                  <input type="email" id="email" name="email" required autocomplete="email" class="form-input" placeholder="seu@email.com" />
-                </div>
-                <div class="form-group">
-                  <label for="telefone" class="form-label">Telefone</label>
-                  <input type="tel" id="telefone" name="telefone" required autocomplete="tel" class="form-input" placeholder="(63) 99242-6210" />
-                </div>
-              </div>
-              <div class="form-group mt-5">
-                <label for="servico" class="form-label">Serviço de interesse</label>
-                <select id="servico" name="servico" class="form-input">
-                  <option value="spt">Sondagem SPT</option>
-                  <option value="investigacao">Investigação geotécnica</option>
-                  <option value="relatorio">Relatório técnico</option>
-                  <option value="consultoria">Consultoria</option>
-                  <option value="outro">Outro</option>
-                </select>
-              </div>
-              <div class="form-group mt-5">
-                <label for="mensagem" class="form-label">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" rows="4" required class="form-input resize-y min-h-[120px]" placeholder="Descreva a localização da obra, quantidade de furos estimada e prazo desejado..."></textarea>
-              </div>
-              <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-4">
-                <button type="submit" class="inline-flex items-center justify-center gap-2 rounded-xl bg-geo-500 px-8 py-3.5 text-base font-semibold text-white hover:bg-geo-600 transition-all shadow-lg shadow-geo-500/25 disabled:opacity-60 disabled:cursor-not-allowed">
-                  <span data-submit-text>Enviar mensagem</span>
-                  <svg class="h-5 w-5 hidden animate-spin" data-submit-spinner fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-                </button>
-                <p class="text-xs text-geo-500">Ao enviar, você concorda em ser contatado pela Geoplan.</p>
-              </div>
-              <p id="form-feedback" class="mt-4 text-sm font-medium hidden" role="status"></p>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer data-dot-zone="dark" class="bg-geo-950/65 text-white py-12 relative z-[1]">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-        <a href="#topo" class="flex items-center">
-          <img src="assets/logo.png" alt="Geoplan" class="h-10 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" width="180" height="40" />
-        </a>
-        <nav class="flex flex-wrap gap-6 text-sm text-white/80">
-          <a href="#inicio" class="hover:text-geo-400 transition-colors">Início</a>
-          <a href="#sobre" class="hover:text-geo-400 transition-colors">Sobre</a>
-          <a href="#servicos" class="hover:text-geo-400 transition-colors">Serviços</a>
-          <a href="#prazos" class="hover:text-geo-400 transition-colors">Prazos</a>
-          <a href="#contato" class="hover:text-geo-400 transition-colors">Contato</a>
-        </nav>
-      </div>
-      <div class="mt-8 pt-8 border-t border-geo-800 flex flex-col sm:flex-row sm:justify-between gap-4 text-xs text-white/55">
-        <p>&copy; <span id="ano"></span> Geoplan. Todos os direitos reservados.</p>
-        <p>Sondagem SPT · NBR 7188 · Investigação geotécnica</p>
-      </div>
+<body class="geoplan">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header id="topo" class="site-header" data-header>
+    <div class="page-width header-inner">
+      <a class="brand" href="#inicio" aria-label="Geoplan Engenharia e Consultoria Técnica — início"><img src="assets/logo.png" alt="Geoplan Engenharia e Consultoria Técnica" width="2172" height="724"></a>
+      <nav class="desktop-nav" aria-label="Navegação principal"><a class="nav-link" href="#servicos">Serviços</a><a class="nav-link" href="#sobre">A Geoplan</a><a class="nav-link" href="#prazos">Prazos</a><a class="nav-link" href="#contato">Contato</a></nav>
+      <a class="header-contact" href="#contato">Fale conosco <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right icon" aria-hidden="true" focusable="false" data-icon="arrow-up-right"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile" data-menu-toggle hidden><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu icon" aria-hidden="true" focusable="false" data-icon="menu"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button>
     </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+    <div id="menu-mobile" class="mobile-menu" data-mobile-menu hidden><nav class="page-width mobile-menu-inner" aria-label="Navegação mobile"><a href="#servicos">Serviços</a><a href="#sobre">A Geoplan</a><a href="#prazos">Prazos</a><a href="#equipamentos">Equipamentos e equipe</a><a href="#contato">Contato</a></nav></div>
+  </header>
+  <main id="conteudo" tabindex="-1">
+    <section id="inicio" class="hero" aria-labelledby="titulo-principal">
+      <!-- hero:react:start -->
+<div id="hero-react"><div class="hero-composition" data-background-running="false"><div class="hero-background" aria-hidden="true"></div><div class="hero-orbits" aria-hidden="true"></div><div class="hero-diagonals" aria-hidden="true"></div><div class="page-width hero-stage"><div class="hero-copy"><p class="hero-kicker"><span></span>Engenharia que começa pelo solo</p><h1 id="titulo-principal" class="hero-title" data-hero-part="title">Conhecer o solo é <em>construir</em> com segurança.</h1><p class="hero-intro" data-hero-part="intro">Investigações geotécnicas precisas para transformar as características do terreno em decisões de engenharia mais confiáveis.</p><div class="hero-actions" data-hero-part="actions"><a class="button button-primary" href="#contato" data-hero-part="button" tabindex="0">Solicite uma proposta<span class="hero-arrow" data-hero-part="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right icon" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span></a><a class="button button-outline" href="#servicos">Conheça os serviços <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down icon" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"></path></svg></a></div></div><aside class="hero-territory"><p class="territory-title">Palmas, TO</p><p>Conhecimento local para projetos que respeitam o território e o futuro.</p><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin icon" aria-hidden="true" focusable="false"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg> Tocantins, Brasil</span></aside></div><div class="hero-explore"><span>01</span><span class="explore-rule"></span><span>Explorar</span><button type="button" class="background-toggle" hidden aria-label="Pausar animação do fundo" title="Pausar animação do fundo"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pause icon" aria-hidden="true" focusable="false"><rect x="14" y="3" width="5" height="18" rx="1"></rect><rect x="5" y="3" width="5" height="18" rx="1"></rect></svg></button></div></div></div>
+<!-- hero:react:end -->
+    </section>
+    <section id="sobre" class="section-space about" aria-labelledby="titulo-sobre">
+      <div class="page-width about-layout"><div><p class="eyebrow">Nossa abordagem</p><h2 id="titulo-sobre">O terreno conta uma história. <span>A gente sabe ouvir.</span></h2></div>
+        <div class="about-copy"><p>Na Geoplan, cada investigação começa com uma pergunta simples: o que este solo precisa nos dizer? Unimos técnica, experiência e conhecimento regional para entregar dados que fazem sentido para o seu projeto.</p><p>Somos uma empresa de Palmas - TO focada em investigações geotécnicas e consultoria técnica. Nosso trabalho dá clareza às decisões e segurança a cada etapa da obra.</p>
+          <div class="about-facts"><span><strong>06</strong> soluções técnicas</span><span><strong>TO</strong> atuação regional</span><span><strong>01</strong> compromisso</span></div>
+        </div>
+      </div>
+    </section>
+    <section id="servicos" class="section-space services" aria-labelledby="titulo-servicos"><div class="page-width"><header class="services-heading"><div><p class="eyebrow">O que fazemos</p><h2 id="titulo-servicos">Investigação com propósito.</h2></div><p>Soluções técnicas para revelar o comportamento do solo antes, durante e depois da obra.</p></header><div class="service-catalog"><article class="service-entry"><div class="service-marker"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 240" width="25" height="25" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" class="service-symbol" data-service-icon="spt" aria-hidden="true" focusable="false"><path d="M110 18 16 188h75m38 0h75L110 18v82"></path><rect x="92" y="100" width="36" height="40"></rect><path d="M110 140v88m-14-16 14 16 14-16"></path></svg><span class="service-index" aria-hidden="true">01</span></div><h3>SPT</h3><p>Standard Penetration Test para caracterização do subsolo e suporte ao dimensionamento de fundações.</p></article>
+<article class="service-entry"><div class="service-marker"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 240" width="25" height="25" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" class="service-symbol" data-service-icon="rotativa" aria-hidden="true" focusable="false"><path d="M110 7v225M90 24h40l35 126H55L90 24Zm0 0 53 48-78 52 80 26M130 24 77 72l78 52-80 26M20 150h75m30 0h75"></path><path d="M124 164c-42 10-42 14-14 22s27 12-8 23 3 15 17 17M78 180c-34 7-40 22-12 30m-8-14 8 14-16 3M142 180c34 7 40 22 12 30m-4-15-8-15 17-4"></path></svg><span class="service-index" aria-hidden="true">02</span></div><h3>Sondagem Manual</h3><p>Investigação direta e ágil para obras de pequeno porte e estudos preliminares.</p></article>
+<article class="service-entry"><div class="service-marker"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-waves-horizontal lucide-waves icon" aria-hidden="true" focusable="false" data-icon="waves"><path d="M2 12q2.5 2 5 0t5 0 5 0 5 0"></path><path d="M2 19q2.5 2 5 0t5 0 5 0 5 0"></path><path d="M2 5q2.5 2 5 0t5 0 5 0 5 0"></path></svg><span class="service-index" aria-hidden="true">03</span></div><h3>Percolação</h3><p>Ensaios para avaliar a capacidade de infiltração do solo em sistemas de saneamento.</p></article>
+<article class="service-entry"><div class="service-marker"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 240" width="25" height="25" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" class="service-symbol" data-service-icon="resistividade" aria-hidden="true" focusable="false"><path d="M35 73v132h150V73M43 65h20c16 0 15-47 31-36s23 95 40 60 15-24 43-24M10 140h200M85 140v32m50-32v32M94 188h19m-7-6 7 6-7 6M112 221h19m-7-6 7 6-7 6M16 173v-18m-7 7 7-7 7 7m181 11v-18m-7 7 7-7 7 7M120 12l-7 12h12l-7 12M90 59v12m39-12v12"></path><circle cx="35" cy="65" r="8"></circle><circle cx="185" cy="65" r="8"></circle></svg><span class="service-index" aria-hidden="true">04</span></div><h3>Resistividade</h3><p>Análise elétrica do terreno para projetos de aterramento e proteção contra descargas.</p></article>
+<article class="service-entry"><div class="service-marker"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 240" width="25" height="25" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" class="service-symbol" data-service-icon="dcp" aria-hidden="true" focusable="false"><path d="M68 20h84a6 6 0 0 1 0 12h-36v56h-12V32H68a6 6 0 0 1 0-12Z"></path><rect x="96" y="88" width="28" height="40" rx="1"></rect><path d="M104 128v68h-8l14 30 14-30h-8v-68M32 196h48m60 0h48"></path></svg><span class="service-index" aria-hidden="true">05</span></div><h3>Investigações especiais</h3><p>Ensaios e soluções sob medida para os desafios específicos de cada empreendimento.</p></article>
+<article class="service-entry"><div class="service-marker"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 240" width="25" height="25" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" class="service-symbol" data-service-icon="dpl" aria-hidden="true" focusable="false"><path d="M91 13h38v30c-10 7-28 7-38 0V13Zm13 35v42m12-42v42"></path><rect x="98" y="90" width="24" height="30" rx="2"></rect><path d="M98 99H64a6 6 0 0 0 0 12h34m24-12h34a6 6 0 0 1 0 12h-34M104 120v48m12-48v48"></path><path d="M98 168h24v21H98zM60 189h100l8 14H52l8-14Zm-28 14h156m-86 0v16l8 15 8-15v-16"></path></svg><span class="service-index" aria-hidden="true">06</span></div><h3>Consultoria geotécnica</h3><p>Leitura técnica dos dados para decisões mais seguras, econômicas e responsáveis.</p></article></div></div></section>
+    <section id="prazos" class="section-space process" aria-labelledby="titulo-processo"><div class="page-width"><span id="processo" class="anchor-alias" aria-hidden="true"></span><div class="process-layout"><div class="process-intro"><p class="eyebrow">Como trabalhamos</p><h2 id="titulo-processo">Prazos e etapas do projeto</h2><p>Um processo claro, do primeiro contato à entrega do relatório técnico. Acompanhamento próximo em todas as etapas.</p></div><ol class="process-track"><li><div class="process-step-heading"><h3>Proposta</h3><span>Aceite da proposta</span></div><p>Alinhamento do escopo e das necessidades da obra.</p></li>
+<li><div class="process-step-heading"><h3>Assinatura</h3><span>1 dia</span></div><p>Formalização do contrato e definição do cronograma.</p></li>
+<li><div class="process-step-heading"><h3>Mobilização</h3><span>1 dia</span></div><p>Preparação e deslocamento da equipe de campo.</p></li>
+<li><div class="process-step-heading"><h3>Execução</h3><span>1 dia</span></div><p>Realização dos furos SPT e registro das camadas.</p></li>
+<li><div class="process-step-heading"><h3>Entrega</h3><span>Até 24h após a sondagem</span></div><p>Relatório técnico, perfil geotécnico e ART quando solicitada.</p></li></ol></div><p class="process-note">Prazos de mobilização e execução podem variar de acordo com a distância e quantidade de furos.</p></div></section>
+    <section id="equipamentos" class="section-space equipment" aria-labelledby="titulo-equipamentos"><div class="page-width equipment-layout"><div class="equipment-intro"><p class="eyebrow">Em campo</p><h2 id="titulo-equipamentos">Equipamentos, veículos e equipe em ação</h2></div><section class="equipment-gallery" data-equipment-carousel aria-roledescription="carrossel" aria-label="Equipamentos e equipe em ação">
+        <div class="equipment-viewport" id="equipment-photos" data-carousel-viewport tabindex="0" aria-label="Fotos de campo; use as setas para navegar">
+          <figure class="equipment-image" role="group" aria-roledescription="slide" aria-label="1 de 2"><img src="assets/equipment-field.jpg" alt="Profissional com capacete e uniforme operando tripé de sondagem em área de infraestrutura elétrica" width="1264" height="848" loading="lazy"><figcaption>Sondagem em área de infraestrutura elétrica</figcaption></figure>
+          <figure class="equipment-image" role="group" aria-roledescription="slide" aria-label="2 de 2"><img src="assets/hero-bg.jpg" alt="Detalhe ilustrativo de equipamento de sondagem com tripé" width="1024" height="1024" loading="lazy"><figcaption>Imagem ilustrativa de investigação em campo</figcaption></figure>
+        </div>
+        <div class="equipment-controls" data-carousel-controls hidden>
+          <button type="button" data-carousel-prev aria-label="Foto anterior" aria-controls="equipment-photos"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right icon" aria-hidden="true" focusable="false" data-icon="arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+          <span class="equipment-count" data-carousel-status aria-live="polite" aria-atomic="true">Foto 1 de 2</span>
+          <button type="button" data-carousel-next aria-label="Próxima foto" aria-controls="equipment-photos"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right icon" aria-hidden="true" focusable="false" data-icon="arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+        </div>
+      </section></div></section>
+    <section id="contato" class="section-space contact" aria-labelledby="titulo-contato"><div class="page-width"><header class="contact-heading"><p class="eyebrow">Contato</p><h2 id="titulo-contato">Solicite seu <em>orçamento.</em></h2><p>Preencha o formulário ou use um dos canais abaixo. Respondemos em até 24 horas úteis.</p></header><div class="contact-layout"><div class="contact-details">
+      <a href="tel:+5563992426210" class="contact-card"><span class="contact-label">Telefone</span><strong>(63)&nbsp;99242&#8209;6210</strong></a>
+      <a href="mailto:geoplanengenharia.to@gmail.com" class="contact-card"><span class="contact-label">E-mail</span><strong>geoplanengenharia.to@gmail.com</strong></a>
+      <a href="https://wa.me/5563992426210" target="_blank" rel="noopener noreferrer" class="contact-card"><span class="contact-label">WhatsApp</span><strong>Enviar mensagem <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right icon" aria-hidden="true" focusable="false" data-icon="arrow-up-right"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></strong></a>
+      <div class="contact-card"><span class="contact-label">Endereço</span><address>Quadra ARNO 42, Alameda 8, nº s/n, QI 14, Lote 25<br>Plano Diretor Norte — Palmas, TO · CEP 77002-018</address><span class="contact-hours">Segunda a sexta, 8h às 18h</span></div>
+      </div>
+      <form id="form-contato" class="contact-form" aria-label="Solicitar orçamento por e-mail" novalidate hidden>
+        <div class="form-field"><label for="nome">Nome completo</label><input type="text" id="nome" name="nome" required autocomplete="name" placeholder="Seu nome"></div>
+        <div class="form-field"><label for="empresa">Empresa / Obra</label><input type="text" id="empresa" name="empresa" autocomplete="organization" placeholder="Nome da empresa ou obra"></div>
+        <div class="form-field"><label for="email">E-mail</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="seu@email.com"></div>
+        <div class="form-field"><label for="telefone">Telefone</label><input id="telefone" name="telefone" type="tel" required autocomplete="tel" placeholder="(00) 00000-0000"></div>
+        <div class="form-field form-full"><label for="servico">Serviço de interesse</label><select id="servico" name="servico"><option value="SPT">Sondagem SPT</option><option>Investigação geotécnica</option><option>Percolação</option><option>Resistividade</option><option>Consultoria técnica</option><option>Outro</option></select></div>
+        <div class="form-field form-full"><label for="mensagem">Mensagem</label><textarea id="mensagem" name="mensagem" required rows="4" placeholder="Conte brevemente sobre o seu projeto"></textarea></div>
+        <button type="submit" class="button button-primary"><span data-submit-text>Enviar mensagem</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right icon" aria-hidden="true" focusable="false" data-icon="arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-loader-circle lucide-loader-2 icon" aria-hidden="true" focusable="false" data-icon="loader-circle" data-submit-spinner="" hidden><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></button><p class="consent">Ao enviar, você concorda em ser contatado pela Geoplan.</p>
+        <p id="form-feedback" class="form-feedback form-full" role="status" aria-live="polite" hidden></p>
+        <p class="form-help form-full">A mensagem é preparada no seu aplicativo de e-mail para você revisar e enviar.</p>
+      </form><noscript><p>Escreva para <a href="mailto:geoplanengenharia.to@gmail.com">geoplanengenharia.to@gmail.com</a> ou use o WhatsApp ao lado.</p></noscript>
+    </div></div></section>
+  </main>
+  <footer class="site-footer"><div class="page-width footer-bottom"><span>© <span id="ano">2026</span> Geoplan Engenharia e Consultoria Técnica</span><span>SPT · NBR 7188 · Investigação geotécnica</span></div></footer>
 </body>
 </html>

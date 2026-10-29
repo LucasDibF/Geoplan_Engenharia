@@ -1,0 +1,17 @@
+/* Referência atual: introdução à esquerda, cinco etapas em trilho fino à direita. */
+.process { background: var(--geo-200); }
+.process-layout { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); gap: 56px; }
+.process .eyebrow { color: var(--geo-500); }
+.process-intro h2 { max-width: 448px; margin-top: 20px; }
+.process-intro > p:last-child { max-width: 384px; margin-top: 24px; font-size: 14px; line-height: 24px; color: var(--geo-700); }
+.process-track { position: relative; padding-left: 40px; border-left: 1px solid #d8733173; }
+.process-track li { position: relative; padding-bottom: 36px; }
+.process-track li:last-child { padding-bottom: 0; }
+.process-track li::before { content: ''; position: absolute; left: -47px; top: 4px; width: 12px; height: 12px; border: 2px solid var(--geo-200); border-radius: 50%; background: var(--geo-500); }
+.process-step-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.process-step-heading h3 { color: var(--geo-900); }
+.process-step-heading > span { color: var(--geo-500); font-size: 10px; font-weight: 700; letter-spacing: .16em; line-height: 1.5; text-transform: uppercase; }
+.process-track li > p { max-width: 448px; margin-top: 8px; font-size: 14px; line-height: 24px; color: var(--geo-700); }
+.process-note { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--geo-300); font-size: 12px; line-height: 16px; color: var(--geo-700); }
+@media (max-width: 1023px) { .process-layout { grid-template-columns: minmax(0,1fr); } }
+@media (max-width: 639px) { .process-track { padding-left: 28px; } .process-track li::before { left: -35px; } .process-step-heading { flex-direction: column; align-items: flex-start; } }

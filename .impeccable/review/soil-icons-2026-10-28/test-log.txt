@@ -1,0 +1,15 @@
+[WebServer] (node:97229) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:97231) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/e2e/site.spec.js:22:1 › conteúdo literal e composição da pasta, com seis serviços e sobre restaurado (793ms)
+  ✓  2 [desktop] › tests/e2e/site.spec.js:36:1 › fontes e composição responsiva sem overflow de 320 a 1600 (922ms)
+(node:97254) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [mobile] › tests/e2e/site.spec.js:22:1 › conteúdo literal e composição da pasta, com seis serviços e sobre restaurado (578ms)
+  ✓  4 [mobile] › tests/e2e/site.spec.js:36:1 › fontes e composição responsiva sem overflow de 320 a 1600 (594ms)
+
+  4 passed (5.3s)
