@@ -6,6 +6,36 @@ const DEFAULT_KIT = { animate };
 const controllers = new WeakMap();
 const HERO = '.hero,[data-react-hero]';
 
+function prepareWordsStagger(root, win) {
+  const textNodes = [];
+  const walker = root.createTreeWalker(root, win.NodeFilter?.SHOW_TEXT ?? 4);
+  let node;
+  while ((node = walker.nextNode())) {
+    if (node.parentElement?.closest('h2,h3') && node.nodeValue.trim()) textNodes.push(node);
+  }
+  const headings = [...root.querySelectorAll('main h2, main h3')];
+  headings.forEach((heading) => {
+    let index = 0;
+    const descendants = textNodes.filter(textNode => heading.contains(textNode));
+    descendants.forEach((textNode) => {
+      const fragment = root.createDocumentFragment();
+      textNode.nodeValue.split(/(\s+)/).forEach((part) => {
+        if (!part) return;
+        if (/^\s+$/.test(part)) fragment.append(root.createTextNode(part));
+        else {
+          const word = root.createElement('span');
+          word.className = 'words-stagger-word';
+          word.style.setProperty('--word-index', String(index++));
+          word.textContent = part;
+          fragment.append(word);
+        }
+      });
+      textNode.replaceWith(fragment);
+    });
+  });
+  return headings;
+}
+
 export function motionAllowed(win = window) {
   if (!win || typeof win.matchMedia !== 'function' || typeof win.IntersectionObserver !== 'function') return false;
   return !win.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -122,6 +152,26 @@ export function initMotion(root = document, win = window, kit = DEFAULT_KIT) {
       }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
       cleanups.push(() => observer.disconnect());
       reveals.forEach((element) => observer.observe(element));
+    }
+
+    const wordsStagger = prepareWordsStagger(root, win);
+    if (wordsStagger.length) {
+      const revealWords = (element) => {
+        if (element.classList.contains('words-stagger-ready')) return;
+        const rect = element.getBoundingClientRect();
+        if (rect.top < win.innerHeight * 0.9 && rect.bottom > 0) element.classList.add('words-stagger-ready');
+      };
+      const observer = new win.IntersectionObserver((entries) => {
+        if (!active) return;
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          observer.unobserve(entry.target);
+          revealWords(entry.target);
+        });
+      }, { rootMargin: '0px', threshold: 0.01 });
+      cleanups.push(() => observer.disconnect());
+      wordsStagger.forEach((element) => observer.observe(element));
+      onScroll(() => wordsStagger.forEach(revealWords));
     }
 
     const header = root.querySelector('[data-header]');

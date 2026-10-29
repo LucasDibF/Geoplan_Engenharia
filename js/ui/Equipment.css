@@ -1,6 +1,6 @@
 /* Acréscimo solicitado depois da referência: galeria manual preservada. */
 .equipment { background: var(--geo-50); }
-.equipment-layout { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); gap: 56px; align-items: center; }
+.equipment-layout { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); gap: 56px; align-items: start; }
 .equipment .eyebrow { color: var(--geo-500); }
 .equipment-intro h2 { margin-top: 20px; }
 .equipment-gallery { min-width: 0; }

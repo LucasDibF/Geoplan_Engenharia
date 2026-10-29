@@ -8,7 +8,7 @@
 .about-facts > span { display: inline-flex; align-items: baseline; white-space: nowrap; }
 .about-facts strong { margin-right: 8px; color: var(--geo-500); font-size: 24px; line-height: 32px; font-weight: 400; letter-spacing: normal; }
 .services { color: #fff; background: var(--geo-900); }
-.services-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 56px; }
+.services-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 48px; margin-bottom: 56px; }
 .services .eyebrow { color: var(--geo-500); }
 .services h2 { margin-top: 20px; }
 .services-heading > p { max-width: 320px; font-size: 14px; line-height: 24px; color: #ffffff73; }
