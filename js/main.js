@@ -151,7 +151,16 @@ export function initContactForm(root = document, options = {}) {
       const url = buildMailto(form);
       await new Promise((resolve) => setTimeout(resolve, delay));
       const ready = new CustomEvent('geoplan:email-ready', { detail: { url }, cancelable: true });
-      if (form.dispatchEvent(ready)) navigate(url);
+      if (form.dispatchEvent(ready)) {
+        if (options.navigate) {
+          navigate(url);
+        } else {
+          // Tenta abrir o e-mail em uma nova aba e leva sempre à página de
+          // conversão, inclusive quando o navegador bloqueia a nova aba.
+          if (typeof window.open === 'function') window.open(url, '_blank', 'noopener,noreferrer');
+          window.location.assign('obrigado.html');
+        }
+      }
       showFeedback(feedback, 'prepared', 'Mensagem preparada para o seu aplicativo de e-mail. Revise e envie por lá; anexe o arquivo manualmente. Se o aplicativo não abrir, use o endereço de e-mail ou o WhatsApp ao lado.');
     } catch {
       showFeedback(feedback, 'error', 'Não foi possível abrir o aplicativo de e-mail. Seus dados foram mantidos. Escreva para geoplanengenharia.to@gmail.com ou fale pelo WhatsApp.');

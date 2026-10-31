@@ -5,7 +5,7 @@ const logoUrl = '/geoplan-logo.png'
 
 const services = [
   { icon: Drill, number: '01', title: 'SPT', description: 'Standard Penetration Test para caracterização do subsolo e suporte ao dimensionamento de fundações.' },
-  { icon: Layers3, number: '02', title: 'Sondagem Manual', description: 'Investigação direta e ágil para obras de pequeno porte e estudos preliminares.' },
+  { icon: Layers3, number: '02', title: 'Sondagem a Trado', description: 'Investigação direta e ágil para obras de pequeno porte e estudos preliminares.' },
   { icon: Waves, number: '03', title: 'Percolação', description: 'Ensaios para avaliar a capacidade de infiltração do solo em sistemas de saneamento.' },
   { icon: Compass, number: '04', title: 'Resistividade', description: 'Análise elétrica do terreno para projetos de aterramento e proteção contra descargas.' },
   { icon: FlaskConical, number: '05', title: 'Investigações especiais', description: 'Ensaios e soluções sob medida para os desafios específicos de cada empreendimento.' },

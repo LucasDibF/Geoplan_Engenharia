@@ -151,8 +151,8 @@ describe('formulário por mailto', () => {
     form.addEventListener('geoplan:email-ready', event => { event.preventDefault(); prepared = event.detail.url; });
     submit(form); await vi.runAllTimersAsync(); expect(navigate).not.toHaveBeenCalled(); expect(prepared).toMatch(/^mailto:/); expect(root.getElementById('form-feedback').dataset.state).toBe('prepared');
   });
-  it('navegação padrão usa location.assign', async () => {
-    vi.useFakeTimers(); const assign = vi.fn(); vi.stubGlobal('window', { location: { assign } }); initContactForm(root); submit(fill()); await vi.runAllTimersAsync(); expect(assign).toHaveBeenCalledWith(expect.stringContaining('mailto:'));
+  it('abre o e-mail e redireciona para a página de obrigado', async () => {
+    vi.useFakeTimers(); const assign = vi.fn(); const open = vi.fn(() => ({})); vi.stubGlobal('window', { location: { assign }, open }); initContactForm(root); submit(fill()); await vi.runAllTimersAsync(); expect(open).toHaveBeenCalledWith(expect.stringContaining('mailto:'), '_blank', 'noopener,noreferrer'); expect(assign).toHaveBeenCalledWith('obrigado.html');
   });
   it('tolera formulário ou feedback ausentes e mostra estado explícito', () => {
     root.getElementById('form-contato').remove(); expect(() => initContactForm(root)).not.toThrow();

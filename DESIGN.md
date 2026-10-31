@@ -113,7 +113,7 @@ Fontes e tokens: `css/input.css`. Base e hierarquia: `css/site.css`. Composiçã
 Histórico substituído, preservado integralmente: `.impeccable/review/reference-fidelity-correction/documentation-before/`. Não usar suas regras como autoridade operativa.
 
 
-Atualização dos ícones — 28/10/2026: por solicitação do usuário, cinco símbolos técnicos baseados na arte icons - solo.png substituem os ícones de SPT, Sondagem Manual, Resistividade, Investigações especiais e Consultoria geotécnica, nessa ordem. Percolação permanece expressamente com seu ícone Lucide waves original. Nomes, descrições, ordem, dimensões25px e grid preservados. Os novos desenhos têm traço branco e são SVGs em assets/icons/soil, inseridos inline pelo build; não geram pedidos de rede ou dependências. Esta é uma exceção posterior autorizada à iconografia da pasta.
+Atualização dos ícones — 28/10/2026: por solicitação do usuário, cinco símbolos técnicos baseados na arte icons - solo.png substituem os ícones de SPT, Sondagem a Trado, Resistividade, Investigações especiais e Consultoria geotécnica, nessa ordem. Percolação permanece expressamente com seu ícone Lucide waves original. Nomes, descrições, ordem, dimensões25px e grid preservados. Os novos desenhos têm traço branco e são SVGs em assets/icons/soil, inseridos inline pelo build; não geram pedidos de rede ou dependências. Esta é uma exceção posterior autorizada à iconografia da pasta.
 
 Correção de cor solicitada: os cinco símbolos técnicos usam o mesmo laranja de Percolação, token --geo-500 (#d87331).
 

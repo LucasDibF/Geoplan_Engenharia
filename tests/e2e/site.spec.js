@@ -22,7 +22,7 @@ test.afterEach(async({page})=>{
 test('conteúdo literal e composição da pasta, com seis serviços e sobre restaurado',async({page})=>{
  await expect(page.locator('h1')).toHaveText('Conhecer o solo é construir com segurança.');
  await expect(page.locator('#titulo-sobre')).toHaveText('O terreno conta uma história. A gente sabe ouvir.');
- await expect(page.locator('.service-entry h3')).toHaveText(['SPT','Sondagem Manual','Percolação','Resistividade','Investigações especiais','Consultoria geotécnica']);
+ await expect(page.locator('.service-entry h3')).toHaveText(['SPT','Sondagem a Trado','Percolação','Resistividade','Investigações especiais','Consultoria geotécnica']);
  await expect(page.locator('.process-track h3')).toHaveText(['Proposta','Assinatura','Mobilização','Execução','Entrega']);
  await expect(page.locator('.process-track li').last()).toContainText('Relatório técnico, perfil geotécnico e ART quando solicitada.');
  await expect(page.locator('#titulo-contato')).toHaveText('Solicite seu orçamento.');
@@ -66,10 +66,10 @@ test('teclado, âncoras e menu mobile funcionais',async({page},info)=>{
 test('formulário da referência valida e prepara e-mail sem transmitir',async({page})=>{
  await page.evaluate(()=>document.querySelector('form').addEventListener('geoplan:email-ready',event=>{event.preventDefault();window.__mailto=event.detail.url;}));
  const form=page.locator('form');await form.scrollIntoViewIfNeeded();
- await form.getByRole('button',{name:'Enviar mensagem'}).click();await expect(page.locator('#nome')).toBeFocused();
+ await form.getByRole('button',{name:'Solicitar orçamento'}).click();await expect(page.locator('#nome')).toBeFocused();
  await page.locator('#nome').fill('Ana Silva');await page.locator('#telefone').fill('63999999999');await page.locator('#email').fill('inválido');await page.locator('#mensagem').fill('Orçamento para terreno em Palmas');
- await form.getByRole('button',{name:'Enviar mensagem'}).click();await expect(page.locator('#email')).toHaveAttribute('aria-invalid','true');
- await page.locator('#email').fill('ana@example.com');await form.getByRole('button',{name:'Enviar mensagem'}).click();
+ await form.getByRole('button',{name:'Solicitar orçamento'}).click();await expect(page.locator('#email')).toHaveAttribute('aria-invalid','true');
+ await page.locator('#email').fill('ana@example.com');await form.getByRole('button',{name:'Solicitar orçamento'}).click();
  await expect(page.locator('#form-feedback')).toHaveAttribute('data-state','prepared');await expect(page.locator('#nome')).toHaveValue('Ana Silva');
  const url=new URL(await page.evaluate(()=>window.__mailto));expect(url.protocol).toBe('mailto:');expect(url.pathname).toBe('geoplanengenharia.to@gmail.com');expect(url.searchParams.get('body')).toContain('Orçamento para terreno em Palmas');
 });

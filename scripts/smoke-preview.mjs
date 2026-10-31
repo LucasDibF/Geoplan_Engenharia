@@ -26,7 +26,7 @@ try {
   await page.evaluate(()=>document.querySelector('form').addEventListener('geoplan:email-ready',event=>event.preventDefault()));
   await page.locator('#nome').fill('Teste de prévia');await page.locator('#email').fill('preview@example.com');
   await page.locator('#telefone').fill('63999999999');await page.locator('#mensagem').fill('Mensagem de teste local, sem envio.');
-  await page.getByRole('button',{name:'Enviar mensagem'}).click();
+  await page.getByRole('button',{name:'Solicitar orçamento'}).click();
   await expect(page.locator('#form-feedback')).toHaveAttribute('data-state','prepared');
   const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();
   expect(axe.violations.filter(v=>v.id!=='color-contrast')).toEqual([]);

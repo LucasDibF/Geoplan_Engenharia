@@ -21,7 +21,7 @@ Site institucional responsivo com conteúdo literal da pasta `/Users/lucasfreita
 ## Capabilities and Constraints
 
 - Site estático HTML/CSS/JavaScript com ilha React 19, Framer Motion e SVGs Lucide locais; sem Next em produção, backend ou CRM.
-- Exatamente seis serviços: SPT; Sondagem Manual; Percolação; Resistividade; Investigações especiais; Consultoria geotécnica. Nomes, ordem e descrições reproduzem a referência, sem validação comercial independente.
+- Exatamente seis serviços: SPT; Sondagem a Trado; Percolação; Resistividade; Investigações especiais; Consultoria geotécnica. Nomes, ordem e descrições reproduzem a referência, sem validação comercial independente.
 - Sobre integral com dois parágrafos e fatos 06/TO/01; cinco etapas verticais de prazos, conforme captura mais recente. Não restaurar números, diferenciais, normas, segmentos ou FAQ antigos.
 - Contato tem seis campos: nome completo, empresa/obra, e-mail, telefone, serviço de interesse e mensagem. Validação local prepara `mailto:` no aplicativo do usuário, sem SMTP ou upload. A explicação desse comportamento é acomodação funcional; campos usam 16px para iOS.
 - Menu mobile, âncoras, telefone, WhatsApp, e-mail, carrossel manual de duas fotos e fundo animado pausável. Sem JavaScript, conteúdo permanece legível e canais diretos disponíveis.
@@ -46,6 +46,6 @@ Reproduzir o conteúdo e a composição aprovados; manter contato direto e funci
 Documentação anterior integral: `.impeccable/review/reference-fidelity-correction/documentation-before/`. É histórico substituído, sem autoridade operativa.
 
 
-Atualização dos ícones — 28/10/2026: por solicitação do usuário, cinco símbolos técnicos baseados na arte icons - solo.png substituem os ícones de SPT, Sondagem Manual, Resistividade, Investigações especiais e Consultoria geotécnica, nessa ordem. Percolação permanece expressamente com seu ícone Lucide waves original. Nomes, descrições, ordem, dimensões25px e grid preservados. Os novos desenhos têm traço branco e são SVGs em assets/icons/soil, inseridos inline pelo build; não geram pedidos de rede ou dependências. Esta é uma exceção posterior autorizada à iconografia da pasta.
+Atualização dos ícones — 28/10/2026: por solicitação do usuário, cinco símbolos técnicos baseados na arte icons - solo.png substituem os ícones de SPT, Sondagem a Trado, Resistividade, Investigações especiais e Consultoria geotécnica, nessa ordem. Percolação permanece expressamente com seu ícone Lucide waves original. Nomes, descrições, ordem, dimensões25px e grid preservados. Os novos desenhos têm traço branco e são SVGs em assets/icons/soil, inseridos inline pelo build; não geram pedidos de rede ou dependências. Esta é uma exceção posterior autorizada à iconografia da pasta.
 
 Correção de cor solicitada: os cinco símbolos técnicos usam o mesmo laranja de Percolação, token --geo-500 (#d87331).
