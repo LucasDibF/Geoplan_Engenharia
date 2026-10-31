@@ -21,7 +21,7 @@
 .geoplan .whatsapp-float { position: fixed; right: 24px; bottom: 24px; z-index: 20; display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 18px 0 14px; border: 1px solid #128c4a; border-radius: 999px; background: #25d366; color: #fff; font: 700 11px/1 var(--font-editorial); letter-spacing: .08em; text-transform: uppercase; box-shadow: 0 10px 24px #24242242; transition: background .2s, transform .2s, box-shadow .2s; }
 .geoplan .whatsapp-float:hover { background: #1fbd5b; transform: translateY(-2px); box-shadow: 0 13px 28px #24242252; }
 .geoplan .whatsapp-float:focus-visible { outline-color: #25d366; outline-offset: 4px; }
-.geoplan .whatsapp-float-icon { width: 25px; height: 25px; }
+.geoplan .whatsapp-float-icon { display: block; width: 27px; height: 27px; }
 .thank-you-page { background: var(--geo-900); color: #fff; }
 .thank-you { display: flex; min-height: 100svh; flex-direction: column; justify-content: space-between; padding: 32px 40px; background: radial-gradient(circle at 72% 24%, #d8733124 0, transparent 32rem), var(--geo-900); }
 .thank-you-brand { display: block; width: min(238px, 58vw); }
