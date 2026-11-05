@@ -7,6 +7,7 @@ import { monitorBrowserHealth,browserHealthProblems,criticalAssets,galleryAssets
 
 const monitors=new WeakMap();
 test.beforeEach(async({page})=>{
+ await page.route('https://www.googletagmanager.com/**', route => route.fulfill({ status: 200, contentType: 'application/javascript', body: '' }));
  monitors.set(page,monitorBrowserHealth(page));await page.goto('/');await page.evaluate(()=>document.fonts.ready);
  await expect.poll(()=>browserHealthProblems(monitors.get(page).snapshot(),page.url())).toEqual([]);
  expect(fontHealthProblems(await page.evaluate(inspectLoadedFonts,fontExpectations))).toEqual([]);
@@ -63,15 +64,37 @@ test('teclado, âncoras e menu mobile funcionais',async({page},info)=>{
  await page.locator('.hero-actions a[href="#contato"]').click();await expect(page.locator('#titulo-contato')).toBeFocused();
 });
 
-test('formulário da referência valida e prepara e-mail sem transmitir',async({page})=>{
- await page.evaluate(()=>document.querySelector('form').addEventListener('geoplan:email-ready',event=>{event.preventDefault();window.__mailto=event.detail.url;}));
- const form=page.locator('form');await form.scrollIntoViewIfNeeded();
- await form.getByRole('button',{name:'Solicitar orçamento'}).click();await expect(page.locator('#nome')).toBeFocused();
- await page.locator('#nome').fill('Ana Silva');await page.locator('#telefone').fill('63999999999');await page.locator('#email').fill('inválido');await page.locator('#mensagem').fill('Orçamento para terreno em Palmas');
- await form.getByRole('button',{name:'Solicitar orçamento'}).click();await expect(page.locator('#email')).toHaveAttribute('aria-invalid','true');
- await page.locator('#email').fill('ana@example.com');await form.getByRole('button',{name:'Solicitar orçamento'}).click();
- await expect(page.locator('#form-feedback')).toHaveAttribute('data-state','prepared');await expect(page.locator('#nome')).toHaveValue('Ana Silva');
- const url=new URL(await page.evaluate(()=>window.__mailto));expect(url.protocol).toBe('mailto:');expect(url.pathname).toBe('geoplanengenharia.to@gmail.com');expect(url.searchParams.get('body')).toContain('Orçamento para terreno em Palmas');
+test('formulário valida e confirma o envio sem transmitir dados reais',async({page})=>{
+ const requests=[];
+ await page.route('https://api.web3forms.com/submit',async route=>{
+  requests.push(route.request().postDataJSON());
+  await route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({success:true})});
+ });
+ const form=page.locator('#form-contato');await form.scrollIntoViewIfNeeded();
+ await form.getByRole('button',{name:'Solicitar orçamento'}).click();
+ await expect(page.locator('#nome')).toBeFocused();expect(requests).toHaveLength(0);
+ await page.locator('#nome').fill('Ana Teste');await page.locator('#telefone').fill('63999999999');
+ await page.locator('#email').fill('ana@example.com');await page.locator('#mensagem').fill('Solicitação sintética de teste');
+ await page.locator('#servico').selectOption({index:1});
+ await form.getByRole('button',{name:'Solicitar orçamento'}).click();
+ await expect(page).toHaveURL(/\/obrigado\.html$/);
+ expect(requests).toHaveLength(1);expect(requests[0]).toMatchObject({nome:'Ana Teste',email:'ana@example.com',mensagem:'Solicitação sintética de teste'});
+ await expect(page.getByRole('heading',{level:1})).toContainText('Recebemos seu pedido');
+ await expect(page.getByRole('link',{name:'Voltar ao site'}).first()).toHaveAttribute('href','/');
+ // Retornar permite ao afterEach conferir os ativos da página principal.
+ await page.goto('/');
+});
+
+test('falha de envio preserva campos e oferece nova tentativa',async({page})=>{
+ await page.route('https://api.web3forms.com/submit',route=>route.fulfill({status:500,contentType:'application/json',body:JSON.stringify({success:false})}));
+ await page.locator('#nome').fill('Ana Teste');await page.locator('#telefone').fill('63999999999');
+ await page.locator('#email').fill('ana@example.com');await page.locator('#mensagem').fill('Solicitação sintética de teste');
+ await page.locator('#servico').selectOption({index:1});
+ await page.locator('#form-contato button[type="submit"]').click();
+ await expect(page.locator('#form-feedback')).toContainText('Não foi possível enviar');
+ await expect(page.locator('#nome')).toHaveValue('Ana Teste');
+ await expect(page.locator('#form-contato button[type="submit"]')).toBeEnabled();
+ expect(await page.evaluate(()=>window.dataLayer.filter(item=>item.event==='generate_lead'))).toHaveLength(0);
 });
 
 test('carrossel autorizado funciona por botão, teclado e scroll',async({page})=>{
@@ -95,9 +118,9 @@ test('fundo animado preserva a referência e pausa por preferência e visibilida
 });
 
 test('HTML pré-renderizado e contato continuam acessíveis sem JavaScript',async({browser})=>{
- const context=await browser.newContext({javaScriptEnabled:false,baseURL:'http://127.0.0.1:4173'});const page=await context.newPage();await page.goto('/');
+ const context=await browser.newContext({javaScriptEnabled:false,baseURL:'http://127.0.0.1:4173'});await context.route('https://www.googletagmanager.com/**',route=>route.fulfill({status:200,body:''}));const page=await context.newPage();await page.goto('/');
  await expect(page.locator('h1')).toBeVisible();await expect(page.locator('.service-entry')).toHaveCount(6);
- await expect(page.locator('#form-contato')).toBeHidden();await expect(page.locator('noscript a')).toHaveAttribute('href','mailto:geoplanengenharia.to@gmail.com');
+ await expect(page.locator('#form-contato')).toBeVisible();await expect(page.locator('noscript a')).toHaveAttribute('href','mailto:geoplanengenharia.to@gmail.com');
  await page.locator('.equipment-gallery').scrollIntoViewIfNeeded();await expect(page.locator('.equipment-image')).toHaveCount(2);
  expect(await page.locator('.hero-orbits').evaluate(n=>getComputedStyle(n).animationPlayState)).toBe('paused');await context.close();
 });
